@@ -5,28 +5,38 @@
 #include <pthread.h>
 // #include <signal.h>
 
-
 int fd_touch;
+
+
+Button button[4] = {
+    {0, 0, 200, 200, "Start"},
+    {200, 0, 400, 200, "Stop"},
+    {0, 200, 200, 400, "Pause"},
+    {200, 200, 400, 400, "Continue"},
+};
+int button_color[4] = {0xff0000, 0x00ff00, 0x0000ff, 0xffff00};
 
 
 int main(int argc, char const *argv[])
 {
     pthread_t thread_id_touch;
 
-    if (argc == 2)
-    {
-        // printf("Input Error!\tusage: %s src dst\n", argv[0]); // 使用方式
-        // return -1;
-
-        /* 显示开启图面 */
-        char img_path[100] = {0};
-        strcpy(img_path, argv[1]);
-        show_bitmap(img_path, 0, 0);
-    }
-
     /* 应用初始化·LCD屏幕输出 */
     Systerm_Init();
     printf("LCD init success!\n");
+
+    if (argc == 2)
+    {
+        /* 显示开启图面 */
+        char img_path[64] = {0};
+        strcpy(img_path, argv[1]);
+        show_bitmap(img_path, 0, 0);
+    }
+// 生成 按钮
+    for(int i =0;i<4;i++)
+    {
+        LCD_Draw_rect(button[i].x0,button[i].y0,button[i].x1,button[i].y1,button_color[i]);
+    }
 
     /* 触屏输入 */
     fd_touch = open(TOUCH_DEV_PATH, O_RDONLY);
@@ -39,26 +49,14 @@ int main(int argc, char const *argv[])
 
     /* 线程创建 */
     pthread_create(&thread_id_touch, NULL, input_thread, &fd_touch);
-
-    /* 主循环 */
-    int quit = 0;
-    while (!quit)
+    for(;;)
     {
-        if (info.is_valid > 0 && info.mutex > 0)
-        {
-            info.mutex = 0; // 互斥锁 | 处理屏幕*点击*坐标信息
-            info.is_valid = 1; // 使用过
-            info.mutex = 1;
-        }
-
-        /* 在主循环中加入适当的等待时间，以免卡住 CPU */
-        usleep(10000);
-
-        /* 检查是否需要退出循环 */
-        if (getchar() == 'q')
-        {
-            quit = 1;
-        }
+        // char c = getchar();
+        // if (c == 'q')
+        // {
+        //     quit = 1;
+        // }
+        // usleep(1000);
     }
 
     /* 等待触屏输入线程结束 */
@@ -78,7 +76,7 @@ int main(int argc, char const *argv[])
 // typedef struct {
 //     int is_valid; // 互斥锁 or 条件变量
 //     char msg[MAX_MSG_LEN];
-// } message_t; 
+// } message_t;
 
 // message_t send_box;
 // message_t recv_box;

@@ -9,12 +9,20 @@
 
 typedef struct 
 {
-    int mutex;
-    int is_valid;
+    // int mutex;
+    // int is_valid;
     int x;
     int y;
-}touch_info;
-extern touch_info info;
+}Touch_info;
+extern Touch_info info;
+
+
+typedef struct
+{
+    int x0, y0;
+    int x1, y1;
+    char* info;
+} Button;
 
 void *input_thread(void *arg);
 #endif // TOUCH_H

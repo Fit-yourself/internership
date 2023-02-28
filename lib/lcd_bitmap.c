@@ -24,20 +24,6 @@ void show_bitmap(char *filename, int x, int y)
     read(fb, &file_header, sizeof(BITMAPFILEHEADER));
     read(fb, &info_header, sizeof(BITMAPINFOHEADER));
 
-    // int width = info_header.width;
-    // int height = info_header.height;
-    // printf("width = %d, height = %d, offset = %d\n", width, height, file_header.offset);
-    // if (pixels == MAP_FAILED)
-    // {
-    //     perror("mmap");
-    //     close(fb);
-    //     // close(fd);
-    //     return;
-    // }
-
-    // // 读取像素数据到内存
-    // lseek(fb, file_header.offset, SEEK_SET); // lseek(fd,54,SEEK_SET);
-    // read(fb, pixels, width * height * 3); // 从54开始，数据读取直接到  pixels
     char buf[info_header.width * info_header.height * 3]; // 存储像素数据
     read(fb, buf, sizeof(buf));
 
@@ -51,14 +37,6 @@ void show_bitmap(char *filename, int x, int y)
     if (y + info_header.height > info_header.height)
         y = vinfo.height - info_header.height;
 
-    // 在指定位置绘制图像
-    // char *dst = pixels + (x + y * info_header.width) * 3;
-    // for (int i = 0; i < height; i++)
-    // {
-    //     memcpy(dst, pixels + ((height - i - 1) * info_header.width) * 3, width * 3);
-    //     dst += info_header.width * 3;
-    // }
-
     int color = 0;
     int tmp;
     for (int i = 0; i < info_header.height; i++)
@@ -68,10 +46,9 @@ void show_bitmap(char *filename, int x, int y)
             tmp = i * 3;
             color = buf[tmp] | buf[tmp + 1] << 8 | buf[tmp + 2] << 16;
             LCD_Draw_point(j + x, info_header.height - 1 - i + y, color);
-            // printf("%d ",color);
         }
     }
-    // 关闭文件
+
     close(fb);
     // close(fd);
 }

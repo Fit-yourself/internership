@@ -1,15 +1,29 @@
 #include "touch.h"
-touch_info info = {1,1,0,0};
+extern Button button[4];
+extern int button_color[4];
+Touch_info info = {0, 0};
+
+// Touch_info infos[] = {
+//     {0, 0},
+//     {0, 0},
+//     {0, 0},
+//     {0, 0},
+// };
 
 void button_task(void)
 {
-    if (info.x > 0 && info.x < 200 && info.y > 0 && info.y < 200)
+
+    for (int i = 0; i < 4; i++)
     {
-        printf("YES x = %d, y = %d\n", info.x, info.y);
-    }
-    else
-    {
-        // printf("NO x = %d, y = %d\n", info.x, info.y);
+        if (info.x > button[i].x0 && info.x < button[i].x1 && info.y > button[i].y0  && info.y < button[i].y1)
+        {
+            // printf("YES x = %d, y = %d\n", info.x, info.y);
+            printf("%s\n", button[i].info);
+        }
+        else
+        {
+            // printf("NO x = %d, y = %d\n", info.x, info.y);
+        }
     }
 }
 
@@ -21,9 +35,13 @@ void *input_thread(void *arg)
     int ret;
 
     /* 将输入设备设置为非阻塞模式 */
-    int flags = fcntl(fd, F_GETFL);
-    fcntl(fd, F_SETFL, flags | O_NONBLOCK);
-
+    // int flags = fcntl(fd, F_GETFL);
+    // fcntl(fd, F_SETFL, flags | O_NONBLOCK);
+    // 生成 按钮
+    // for (int i = 0; i < 4; i++)
+    // {
+    //     LCD_Draw_rect(button[i].x0, button[i].y0, button[i].x1, button[i].y1, button_color[i]);
+    // }
     while (1)
     {
         /* 读取输入事件 */
@@ -70,6 +88,7 @@ void *input_thread(void *arg)
             {
                 // printf("X_ABS: %d\n", ev.value);
                 info.x = ev.value * (1.0 * 800 / 1040); // 坐标映射
+
                 // printf("info.x: %d\n", info.x);
             }
             else if (ev.code == ABS_Y)
@@ -79,15 +98,12 @@ void *input_thread(void *arg)
                 // printf("info.y: %d\n", info.y);
             }
 
-            touch_task();
-            // info.mutex = 1;
-            // info.is_valid = 1;
-            // printf("info.mutex = %d, info.is_valid = %d\n", info.mutex, info.is_valid);
+            button_task();
         }
     }
 
     /* 恢复输入设备的阻塞模式 */
-    fcntl(fd, F_SETFL, flags);
+    // fcntl(fd, F_SETFL, flags);
 
     return NULL;
 }
