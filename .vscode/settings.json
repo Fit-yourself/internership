@@ -1,0 +1,12 @@
+{
+    "files.associations": {
+        "touch.h": "c",
+        "pthread.h": "c",
+        "lcd.h": "c",
+        "header.h": "c",
+        "input.h": "c",
+        "bitmap.h": "c",
+        "string.h": "c",
+        "exception": "c"
+    }
+}

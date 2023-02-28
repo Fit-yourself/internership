@@ -1,0 +1,52 @@
+{
+	"kind" : "toolchains",
+	"toolchains" : 
+	[
+		{
+			"compiler" : 
+			{
+				"id" : "GNU",
+				"implicit" : 
+				{
+					"includeDirectories" : 
+					[
+						"/home/flower/.local/arm-linux-gcc/lib/gcc/arm-none-linux-gnueabi/5.4.0/include",
+						"/home/flower/.local/arm-linux-gcc/lib/gcc/arm-none-linux-gnueabi/5.4.0/include-fixed",
+						"/home/flower/.local/arm-linux-gcc/arm-none-linux-gnueabi/include",
+						"/home/flower/.local/arm-linux-gcc/arm-none-linux-gnueabi/sysroot/usr/include"
+					],
+					"linkDirectories" : 
+					[
+						"/home/flower/.local/arm-linux-gcc/lib/gcc/arm-none-linux-gnueabi/5.4.0",
+						"/home/flower/.local/arm-linux-gcc/lib/gcc",
+						"/home/flower/.local/arm-linux-gcc/arm-none-linux-gnueabi/lib",
+						"/home/flower/.local/arm-linux-gcc/arm-none-linux-gnueabi/sysroot/lib",
+						"/home/flower/.local/arm-linux-gcc/arm-none-linux-gnueabi/sysroot/usr/lib"
+					],
+					"linkFrameworkDirectories" : [],
+					"linkLibraries" : 
+					[
+						"gcc",
+						"gcc_s",
+						"c",
+						"gcc",
+						"gcc_s"
+					]
+				},
+				"path" : "/home/flower/.local/arm-linux-gcc/bin/arm-linux-gcc",
+				"version" : "5.4.0"
+			},
+			"language" : "C",
+			"sourceFileExtensions" : 
+			[
+				"c",
+				"m"
+			]
+		}
+	],
+	"version" : 
+	{
+		"major" : 1,
+		"minor" : 0
+	}
+}

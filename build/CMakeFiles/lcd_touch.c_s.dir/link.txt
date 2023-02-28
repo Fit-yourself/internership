@@ -1,0 +1,2 @@
+/home/flower/.local/arm-linux-gcc/bin/arm-linux-ar qc liblcd_touch.c_s.a CMakeFiles/lcd_touch.c_s.dir/lib/lcd_touch.c.o
+/home/flower/.local/arm-linux-gcc/bin/arm-linux-ranlib liblcd_touch.c_s.a

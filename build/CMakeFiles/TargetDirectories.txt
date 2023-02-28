@@ -1,0 +1,6 @@
+/home/flower/YueQian/build/CMakeFiles/lcd_tools.c_s.dir
+/home/flower/YueQian/build/CMakeFiles/lcd_bitmap.c_s.dir
+/home/flower/YueQian/build/CMakeFiles/lcd_touch.c_s.dir
+/home/flower/YueQian/build/CMakeFiles/touch.dir
+/home/flower/YueQian/build/CMakeFiles/edit_cache.dir
+/home/flower/YueQian/build/CMakeFiles/rebuild_cache.dir

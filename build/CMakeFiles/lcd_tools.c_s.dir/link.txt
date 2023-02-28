@@ -1,0 +1,2 @@
+/home/flower/.local/arm-linux-gcc/bin/arm-linux-ar qc liblcd_tools.c_s.a CMakeFiles/lcd_tools.c_s.dir/lib/lcd_tools.c.o
+/home/flower/.local/arm-linux-gcc/bin/arm-linux-ranlib liblcd_tools.c_s.a

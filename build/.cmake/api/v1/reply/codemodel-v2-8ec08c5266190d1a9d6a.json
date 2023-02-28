@@ -1,0 +1,87 @@
+{
+	"configurations" : 
+	[
+		{
+			"directories" : 
+			[
+				{
+					"build" : ".",
+					"jsonFile" : "directory-.-Release-f5ebdc15457944623624.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.5"
+					},
+					"projectIndex" : 0,
+					"source" : ".",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2,
+						3
+					]
+				}
+			],
+			"name" : "Release",
+			"projects" : 
+			[
+				{
+					"directoryIndexes" : 
+					[
+						0
+					],
+					"name" : "YueQian",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2,
+						3
+					]
+				}
+			],
+			"targets" : 
+			[
+				{
+					"directoryIndex" : 0,
+					"id" : "lcd_bitmap.c_s::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-lcd_bitmap.c_s-Release-823e05a1906fa0797fc8.json",
+					"name" : "lcd_bitmap.c_s",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "lcd_tools.c_s::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-lcd_tools.c_s-Release-f6626c98a2dcd7c32158.json",
+					"name" : "lcd_tools.c_s",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "lcd_touch.c_s::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-lcd_touch.c_s-Release-cbcf3254f71a72d6c795.json",
+					"name" : "lcd_touch.c_s",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "touch::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-touch-Release-e8ca40864b81ec4b87d8.json",
+					"name" : "touch",
+					"projectIndex" : 0
+				}
+			]
+		}
+	],
+	"kind" : "codemodel",
+	"paths" : 
+	{
+		"build" : "/home/flower/YueQian/build",
+		"source" : "/home/flower/YueQian"
+	},
+	"version" : 
+	{
+		"major" : 2,
+		"minor" : 3
+	}
+}

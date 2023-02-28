@@ -1,0 +1,1 @@
+/home/flower/.local/arm-linux-gcc/bin/arm-linux-gcc -O3 -DNDEBUG CMakeFiles/touch.dir/src/show_bitmap.c.o CMakeFiles/touch.dir/src/systerm.c.o -o ../bin/touch  liblcd_tools.c_s.a liblcd_bitmap.c_s.a liblcd_touch.c_s.a -lm -lrt -lpthread 

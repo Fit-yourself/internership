@@ -1,0 +1,2 @@
+/home/flower/.local/arm-linux-gcc/bin/arm-linux-ar qc liblcd_bitmap.c_s.a CMakeFiles/lcd_bitmap.c_s.dir/lib/lcd_bitmap.c.o
+/home/flower/.local/arm-linux-gcc/bin/arm-linux-ranlib liblcd_bitmap.c_s.a
