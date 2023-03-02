@@ -10,47 +10,6 @@ char *fbp = 0;
 long int screensize = 0;
 int fbfd;
 
-int LCD_init(void)
-{
-    fbfd = open("/dev/fb0", O_RDWR);
-    if (fbfd == -1)
-    {
-        printf("Error: cannot open framebuffer device.\n");
-        return -1;
-    }
-    if (ioctl(fbfd, FBIOGET_FSCREENINFO, &finfo) == -1)
-    {
-        printf("Error reading fixed information.\n");
-        return -1;
-    }
-    if (ioctl(fbfd, FBIOGET_VSCREENINFO, &vinfo) == -1)
-    {
-        printf("Error reading variable information.\n");
-        return -1;
-    }
-    if (vinfo.bits_per_pixel != 32)
-    {
-        printf("Only support 32 bits per pixel\n");
-        return -1;
-    }
-    // xres = 800, yres = 480, bpp = 32
-    // printf("xres = %d, yres = %d, bpp = %d\n", vinfo.xres, vinfo.yres, vinfo.bits_per_pixel);
-    // screensize = vinfo.xres * vinfo.yres * 3;
-    screensize = vinfo.xres * vinfo.yres * vinfo.bits_per_pixel / 8;
-    fbp = (char *)mmap(0, screensize, PROT_READ | PROT_WRITE, MAP_SHARED, fbfd, 0);
-    if (fbp == NULL)
-    {
-        printf("Error: failed to map framebuffer device to memory.\n");
-        return -1;
-    }
-    return fbfd;
-}
-void LCD_exit(void)
-{
-    munmap(fbp, screensize);
-    close(fbfd);
-}
-
 // void LCD_Draw_Num(int x, int y, int num, int color)
 // {
 //     int w = 16, h = 32;
@@ -166,6 +125,49 @@ void LCD_exit(void)
 //         LCD_Draw_Num(x + i * w, y, digit, color);
 //     }
 // }
+
+
+int LCD_init(void)
+{
+    fbfd = open("/dev/fb0", O_RDWR);
+    if (fbfd == -1)
+    {
+        printf("Error: cannot open framebuffer device.\n");
+        return -1;
+    }
+    if (ioctl(fbfd, FBIOGET_FSCREENINFO, &finfo) == -1)
+    {
+        printf("Error reading fixed information.\n");
+        return -1;
+    }
+    if (ioctl(fbfd, FBIOGET_VSCREENINFO, &vinfo) == -1)
+    {
+        printf("Error reading variable information.\n");
+        return -1;
+    }
+    if (vinfo.bits_per_pixel != 32)
+    {
+        printf("Only support 32 bits per pixel\n");
+        return -1;
+    }
+    // xres = 800, yres = 480, bpp = 32
+    // printf("xres = %d, yres = %d, bpp = %d\n", vinfo.xres, vinfo.yres, vinfo.bits_per_pixel);
+    // screensize = vinfo.xres * vinfo.yres * 3;
+    screensize = vinfo.xres * vinfo.yres * vinfo.bits_per_pixel / 8;
+    fbp = (char *)mmap(0, screensize, PROT_READ | PROT_WRITE, MAP_SHARED, fbfd, 0);
+    if (fbp == NULL)
+    {
+        printf("Error: failed to map framebuffer device to memory.\n");
+        return -1;
+    }
+    return fbfd;
+}
+void LCD_exit(void)
+{
+    munmap(fbp, screensize);
+    close(fbfd);
+}
+
 
 void LCD_Clear(int color)
 {

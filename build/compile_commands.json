@@ -1,6 +1,11 @@
 [
 {
   "directory": "/home/flower/YueQian/build/lib",
+  "command": "/home/flower/.local/arm-linux-gcc/bin/arm-linux-gcc  -I/home/flower/YueQian/inc -O3 -DNDEBUG -o CMakeFiles/MyLibrary.dir/GY39.c.o -c /home/flower/YueQian/lib/GY39.c",
+  "file": "/home/flower/YueQian/lib/GY39.c"
+},
+{
+  "directory": "/home/flower/YueQian/build/lib",
   "command": "/home/flower/.local/arm-linux-gcc/bin/arm-linux-gcc  -I/home/flower/YueQian/inc -O3 -DNDEBUG -o CMakeFiles/MyLibrary.dir/LED.c.o -c /home/flower/YueQian/lib/LED.c",
   "file": "/home/flower/YueQian/lib/LED.c"
 },

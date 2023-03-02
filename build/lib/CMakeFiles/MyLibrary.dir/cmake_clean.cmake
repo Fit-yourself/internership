@@ -1,4 +1,6 @@
 file(REMOVE_RECURSE
+  "CMakeFiles/MyLibrary.dir/GY39.c.o"
+  "CMakeFiles/MyLibrary.dir/GY39.c.o.d"
   "CMakeFiles/MyLibrary.dir/LED.c.o"
   "CMakeFiles/MyLibrary.dir/LED.c.o.d"
   "CMakeFiles/MyLibrary.dir/beep.c.o"

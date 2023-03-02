@@ -17,6 +17,7 @@
         "fonts.h": "c",
         "errno.h": "c",
         "led.h": "c",
-        "beep.h": "c"
+        "beep.h": "c",
+        "gy39.h": "c"
     }
 }

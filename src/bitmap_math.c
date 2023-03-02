@@ -34,10 +34,34 @@ void LCD_Draw_Font(const unsigned char font[], int x, int y, int color) {
         }
     }
 }
+#include "GY39.h"
 int main(int argc, char const *argv[])
 {
     Systerm_Init();
+
+
+    int fd_gy39 = GY39_init();
+    GY39_DATA data = {0};
+    GY39_read(fd_gy39,&data); // 激活
+    sleep(1);
+    // GY39_mod(fd_gy39, 0);
+    while (1)
+    {
+        if (GY39_read(fd_gy39,&data) == -1)
+        {
+
+            // printf("read data error\n");
+            // sleep(3);
+            continue;
+        }
+        printf("light: %f, temp: %f, press: %f, humi: %f, alti: %f\n", data.light, data.temp, data.press, data.humi, data.alti);
+        
+        // if(mode == 1) mode =2;
+        // else mode = 1;
+        // GY39_mod(fd_gy39, mode);
+        sleep(1);
+    }
     // LCD_Draw_Num(100,100,2, 0x0000ff);
-    LCD_Draw_Font(FONTS[1], 0, 0, 0x0000ff);
+    // LCD_Draw_Font(FONTS[1], 0, 0, 0x0000ff);
     return 0;
 }

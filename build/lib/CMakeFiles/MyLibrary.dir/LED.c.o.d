@@ -75,4 +75,5 @@ lib/CMakeFiles/MyLibrary.dir/LED.c.o: /home/flower/YueQian/lib/LED.c \
  /home/flower/.local/arm-linux-gcc/arm-none-linux-gnueabi/sysroot/usr/include/string.h \
  /home/flower/.local/arm-linux-gcc/arm-none-linux-gnueabi/sysroot/usr/include/xlocale.h \
  /home/flower/.local/arm-linux-gcc/arm-none-linux-gnueabi/sysroot/usr/include/bits/string.h \
- /home/flower/.local/arm-linux-gcc/arm-none-linux-gnueabi/sysroot/usr/include/bits/string2.h
+ /home/flower/.local/arm-linux-gcc/arm-none-linux-gnueabi/sysroot/usr/include/bits/string2.h \
+ /home/flower/YueQian/inc/LED.h

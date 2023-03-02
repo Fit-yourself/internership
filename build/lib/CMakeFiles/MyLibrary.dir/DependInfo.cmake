@@ -8,6 +8,7 @@ set(CMAKE_DEPENDS_LANGUAGES
 
 # The set of dependency files which are needed:
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
+  "/home/flower/YueQian/lib/GY39.c" "lib/CMakeFiles/MyLibrary.dir/GY39.c.o" "gcc" "lib/CMakeFiles/MyLibrary.dir/GY39.c.o.d"
   "/home/flower/YueQian/lib/LED.c" "lib/CMakeFiles/MyLibrary.dir/LED.c.o" "gcc" "lib/CMakeFiles/MyLibrary.dir/LED.c.o.d"
   "/home/flower/YueQian/lib/beep.c" "lib/CMakeFiles/MyLibrary.dir/beep.c.o" "gcc" "lib/CMakeFiles/MyLibrary.dir/beep.c.o.d"
   "/home/flower/YueQian/lib/lcd_bitmap.c" "lib/CMakeFiles/MyLibrary.dir/lcd_bitmap.c.o" "gcc" "lib/CMakeFiles/MyLibrary.dir/lcd_bitmap.c.o.d"

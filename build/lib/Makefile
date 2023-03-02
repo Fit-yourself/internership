@@ -130,6 +130,30 @@ MyLibrary/fast:
 	cd /home/flower/YueQian/build && $(MAKE) $(MAKESILENT) -f lib/CMakeFiles/MyLibrary.dir/build.make lib/CMakeFiles/MyLibrary.dir/build
 .PHONY : MyLibrary/fast
 
+GY39.o: GY39.c.o
+.PHONY : GY39.o
+
+# target to build an object file
+GY39.c.o:
+	cd /home/flower/YueQian/build && $(MAKE) $(MAKESILENT) -f lib/CMakeFiles/MyLibrary.dir/build.make lib/CMakeFiles/MyLibrary.dir/GY39.c.o
+.PHONY : GY39.c.o
+
+GY39.i: GY39.c.i
+.PHONY : GY39.i
+
+# target to preprocess a source file
+GY39.c.i:
+	cd /home/flower/YueQian/build && $(MAKE) $(MAKESILENT) -f lib/CMakeFiles/MyLibrary.dir/build.make lib/CMakeFiles/MyLibrary.dir/GY39.c.i
+.PHONY : GY39.c.i
+
+GY39.s: GY39.c.s
+.PHONY : GY39.s
+
+# target to generate assembly for a file
+GY39.c.s:
+	cd /home/flower/YueQian/build && $(MAKE) $(MAKESILENT) -f lib/CMakeFiles/MyLibrary.dir/build.make lib/CMakeFiles/MyLibrary.dir/GY39.c.s
+.PHONY : GY39.c.s
+
 LED.o: LED.c.o
 .PHONY : LED.o
 
@@ -283,6 +307,9 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... MyLibrary"
+	@echo "... GY39.o"
+	@echo "... GY39.i"
+	@echo "... GY39.s"
 	@echo "... LED.o"
 	@echo "... LED.i"
 	@echo "... LED.s"

@@ -1,5 +1,4 @@
-src/CMakeFiles/MyApp.dir/bitmap_math.c.o: \
- /home/flower/YueQian/src/bitmap_math.c \
+lib/CMakeFiles/MyLibrary.dir/GY39.c.o: /home/flower/YueQian/lib/GY39.c \
  /home/flower/.local/arm-linux-gcc/arm-none-linux-gnueabi/sysroot/usr/include/stdc-predef.h \
  /home/flower/YueQian/inc/header.h \
  /home/flower/.local/arm-linux-gcc/arm-none-linux-gnueabi/sysroot/usr/include/stdio.h \
@@ -77,8 +76,7 @@ src/CMakeFiles/MyApp.dir/bitmap_math.c.o: \
  /home/flower/.local/arm-linux-gcc/arm-none-linux-gnueabi/sysroot/usr/include/xlocale.h \
  /home/flower/.local/arm-linux-gcc/arm-none-linux-gnueabi/sysroot/usr/include/bits/string.h \
  /home/flower/.local/arm-linux-gcc/arm-none-linux-gnueabi/sysroot/usr/include/bits/string2.h \
- /home/flower/YueQian/inc/fonts.h /home/flower/YueQian/inc/lcd.h \
- /home/flower/YueQian/inc/GY39.h \
+ /home/flower/YueQian/inc/serial.h /home/flower/YueQian/inc/GY39.h \
  /home/flower/.local/arm-linux-gcc/lib/gcc/arm-none-linux-gnueabi/5.4.0/include/stdint.h \
  /home/flower/.local/arm-linux-gcc/arm-none-linux-gnueabi/sysroot/usr/include/stdint.h \
  /home/flower/.local/arm-linux-gcc/arm-none-linux-gnueabi/sysroot/usr/include/bits/wchar.h
