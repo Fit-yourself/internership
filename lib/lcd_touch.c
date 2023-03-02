@@ -1,4 +1,5 @@
 #include "touch.h"
+#include "lcd.h"
 extern Button button[4];
 extern int button_color[4];
 Touch_info info = {0, 0};
@@ -18,12 +19,15 @@ void button_task(void)
         if (info.x > button[i].x0 && info.x < button[i].x1 && info.y > button[i].y0  && info.y < button[i].y1)
         {
             // printf("YES x = %d, y = %d\n", info.x, info.y);
-            printf("%s\n", button[i].info);
+            // printf("%s\n", button[i].info);
+            if(button[i].info == "Start"){
+                // 播放 mp3
+            }
         }
-        else
-        {
-            // printf("NO x = %d, y = %d\n", info.x, info.y);
-        }
+        // else
+        // {
+        //     // printf("NO x = %d, y = %d\n", info.x, info.y);
+        // }
     }
 }
 

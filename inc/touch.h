@@ -1,8 +1,8 @@
-#if !defined(TOUCH_H)
+#ifndef TOUCH_H
 #define TOUCH_H
 
 #include "header.h"
-#include "lcd.h"
+
 #include <pthread.h>
 #include <linux/input.h>
 #define TOUCH_DEV_PATH "/dev/input/event0"

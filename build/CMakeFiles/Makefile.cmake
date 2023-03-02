@@ -10,6 +10,8 @@ set(CMAKE_MAKEFILE_DEPENDS
   "../CMakeLists.txt"
   "CMakeFiles/3.22.1/CMakeCCompiler.cmake"
   "CMakeFiles/3.22.1/CMakeSystem.cmake"
+  "../lib/CMakeLists.txt"
+  "../src/CMakeLists.txt"
   "/usr/share/cmake-3.22/Modules/CMakeCInformation.cmake"
   "/usr/share/cmake-3.22/Modules/CMakeCommonLanguageInclude.cmake"
   "/usr/share/cmake-3.22/Modules/CMakeGenericSystem.cmake"
@@ -35,12 +37,12 @@ set(CMAKE_MAKEFILE_OUTPUTS
 # Byproducts of CMake generate step:
 set(CMAKE_MAKEFILE_PRODUCTS
   "CMakeFiles/CMakeDirectoryInformation.cmake"
+  "lib/CMakeFiles/CMakeDirectoryInformation.cmake"
+  "src/CMakeFiles/CMakeDirectoryInformation.cmake"
   )
 
 # Dependency information for all targets:
 set(CMAKE_DEPEND_INFO_FILES
-  "CMakeFiles/lcd_tools.c_s.dir/DependInfo.cmake"
-  "CMakeFiles/lcd_bitmap.c_s.dir/DependInfo.cmake"
-  "CMakeFiles/lcd_touch.c_s.dir/DependInfo.cmake"
-  "CMakeFiles/touch.dir/DependInfo.cmake"
+  "lib/CMakeFiles/MyLibrary.dir/DependInfo.cmake"
+  "src/CMakeFiles/MyApp.dir/DependInfo.cmake"
   )

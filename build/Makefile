@@ -117,176 +117,30 @@ depend:
 .PHONY : depend
 
 #=============================================================================
-# Target rules for targets named lcd_tools.c_s
+# Target rules for targets named MyLibrary
 
 # Build rule for target.
-lcd_tools.c_s: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 lcd_tools.c_s
-.PHONY : lcd_tools.c_s
+MyLibrary: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 MyLibrary
+.PHONY : MyLibrary
 
 # fast build rule for target.
-lcd_tools.c_s/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lcd_tools.c_s.dir/build.make CMakeFiles/lcd_tools.c_s.dir/build
-.PHONY : lcd_tools.c_s/fast
+MyLibrary/fast:
+	$(MAKE) $(MAKESILENT) -f lib/CMakeFiles/MyLibrary.dir/build.make lib/CMakeFiles/MyLibrary.dir/build
+.PHONY : MyLibrary/fast
 
 #=============================================================================
-# Target rules for targets named lcd_bitmap.c_s
+# Target rules for targets named MyApp
 
 # Build rule for target.
-lcd_bitmap.c_s: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 lcd_bitmap.c_s
-.PHONY : lcd_bitmap.c_s
+MyApp: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 MyApp
+.PHONY : MyApp
 
 # fast build rule for target.
-lcd_bitmap.c_s/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lcd_bitmap.c_s.dir/build.make CMakeFiles/lcd_bitmap.c_s.dir/build
-.PHONY : lcd_bitmap.c_s/fast
-
-#=============================================================================
-# Target rules for targets named lcd_touch.c_s
-
-# Build rule for target.
-lcd_touch.c_s: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 lcd_touch.c_s
-.PHONY : lcd_touch.c_s
-
-# fast build rule for target.
-lcd_touch.c_s/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lcd_touch.c_s.dir/build.make CMakeFiles/lcd_touch.c_s.dir/build
-.PHONY : lcd_touch.c_s/fast
-
-#=============================================================================
-# Target rules for targets named touch
-
-# Build rule for target.
-touch: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 touch
-.PHONY : touch
-
-# fast build rule for target.
-touch/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/touch.dir/build.make CMakeFiles/touch.dir/build
-.PHONY : touch/fast
-
-lib/lcd_bitmap.o: lib/lcd_bitmap.c.o
-.PHONY : lib/lcd_bitmap.o
-
-# target to build an object file
-lib/lcd_bitmap.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lcd_bitmap.c_s.dir/build.make CMakeFiles/lcd_bitmap.c_s.dir/lib/lcd_bitmap.c.o
-.PHONY : lib/lcd_bitmap.c.o
-
-lib/lcd_bitmap.i: lib/lcd_bitmap.c.i
-.PHONY : lib/lcd_bitmap.i
-
-# target to preprocess a source file
-lib/lcd_bitmap.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lcd_bitmap.c_s.dir/build.make CMakeFiles/lcd_bitmap.c_s.dir/lib/lcd_bitmap.c.i
-.PHONY : lib/lcd_bitmap.c.i
-
-lib/lcd_bitmap.s: lib/lcd_bitmap.c.s
-.PHONY : lib/lcd_bitmap.s
-
-# target to generate assembly for a file
-lib/lcd_bitmap.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lcd_bitmap.c_s.dir/build.make CMakeFiles/lcd_bitmap.c_s.dir/lib/lcd_bitmap.c.s
-.PHONY : lib/lcd_bitmap.c.s
-
-lib/lcd_tools.o: lib/lcd_tools.c.o
-.PHONY : lib/lcd_tools.o
-
-# target to build an object file
-lib/lcd_tools.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lcd_tools.c_s.dir/build.make CMakeFiles/lcd_tools.c_s.dir/lib/lcd_tools.c.o
-.PHONY : lib/lcd_tools.c.o
-
-lib/lcd_tools.i: lib/lcd_tools.c.i
-.PHONY : lib/lcd_tools.i
-
-# target to preprocess a source file
-lib/lcd_tools.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lcd_tools.c_s.dir/build.make CMakeFiles/lcd_tools.c_s.dir/lib/lcd_tools.c.i
-.PHONY : lib/lcd_tools.c.i
-
-lib/lcd_tools.s: lib/lcd_tools.c.s
-.PHONY : lib/lcd_tools.s
-
-# target to generate assembly for a file
-lib/lcd_tools.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lcd_tools.c_s.dir/build.make CMakeFiles/lcd_tools.c_s.dir/lib/lcd_tools.c.s
-.PHONY : lib/lcd_tools.c.s
-
-lib/lcd_touch.o: lib/lcd_touch.c.o
-.PHONY : lib/lcd_touch.o
-
-# target to build an object file
-lib/lcd_touch.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lcd_touch.c_s.dir/build.make CMakeFiles/lcd_touch.c_s.dir/lib/lcd_touch.c.o
-.PHONY : lib/lcd_touch.c.o
-
-lib/lcd_touch.i: lib/lcd_touch.c.i
-.PHONY : lib/lcd_touch.i
-
-# target to preprocess a source file
-lib/lcd_touch.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lcd_touch.c_s.dir/build.make CMakeFiles/lcd_touch.c_s.dir/lib/lcd_touch.c.i
-.PHONY : lib/lcd_touch.c.i
-
-lib/lcd_touch.s: lib/lcd_touch.c.s
-.PHONY : lib/lcd_touch.s
-
-# target to generate assembly for a file
-lib/lcd_touch.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lcd_touch.c_s.dir/build.make CMakeFiles/lcd_touch.c_s.dir/lib/lcd_touch.c.s
-.PHONY : lib/lcd_touch.c.s
-
-src/show_bitmap.o: src/show_bitmap.c.o
-.PHONY : src/show_bitmap.o
-
-# target to build an object file
-src/show_bitmap.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/touch.dir/build.make CMakeFiles/touch.dir/src/show_bitmap.c.o
-.PHONY : src/show_bitmap.c.o
-
-src/show_bitmap.i: src/show_bitmap.c.i
-.PHONY : src/show_bitmap.i
-
-# target to preprocess a source file
-src/show_bitmap.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/touch.dir/build.make CMakeFiles/touch.dir/src/show_bitmap.c.i
-.PHONY : src/show_bitmap.c.i
-
-src/show_bitmap.s: src/show_bitmap.c.s
-.PHONY : src/show_bitmap.s
-
-# target to generate assembly for a file
-src/show_bitmap.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/touch.dir/build.make CMakeFiles/touch.dir/src/show_bitmap.c.s
-.PHONY : src/show_bitmap.c.s
-
-src/systerm.o: src/systerm.c.o
-.PHONY : src/systerm.o
-
-# target to build an object file
-src/systerm.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/touch.dir/build.make CMakeFiles/touch.dir/src/systerm.c.o
-.PHONY : src/systerm.c.o
-
-src/systerm.i: src/systerm.c.i
-.PHONY : src/systerm.i
-
-# target to preprocess a source file
-src/systerm.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/touch.dir/build.make CMakeFiles/touch.dir/src/systerm.c.i
-.PHONY : src/systerm.c.i
-
-src/systerm.s: src/systerm.c.s
-.PHONY : src/systerm.s
-
-# target to generate assembly for a file
-src/systerm.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/touch.dir/build.make CMakeFiles/touch.dir/src/systerm.c.s
-.PHONY : src/systerm.c.s
+MyApp/fast:
+	$(MAKE) $(MAKESILENT) -f src/CMakeFiles/MyApp.dir/build.make src/CMakeFiles/MyApp.dir/build
+.PHONY : MyApp/fast
 
 # Help Target
 help:
@@ -296,25 +150,8 @@ help:
 	@echo "... depend"
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
-	@echo "... lcd_bitmap.c_s"
-	@echo "... lcd_tools.c_s"
-	@echo "... lcd_touch.c_s"
-	@echo "... touch"
-	@echo "... lib/lcd_bitmap.o"
-	@echo "... lib/lcd_bitmap.i"
-	@echo "... lib/lcd_bitmap.s"
-	@echo "... lib/lcd_tools.o"
-	@echo "... lib/lcd_tools.i"
-	@echo "... lib/lcd_tools.s"
-	@echo "... lib/lcd_touch.o"
-	@echo "... lib/lcd_touch.i"
-	@echo "... lib/lcd_touch.s"
-	@echo "... src/show_bitmap.o"
-	@echo "... src/show_bitmap.i"
-	@echo "... src/show_bitmap.s"
-	@echo "... src/systerm.o"
-	@echo "... src/systerm.i"
-	@echo "... src/systerm.s"
+	@echo "... MyApp"
+	@echo "... MyLibrary"
 .PHONY : help
 
 

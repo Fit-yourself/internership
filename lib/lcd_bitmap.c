@@ -7,52 +7,79 @@
 #define pixels fbp
 // char* pixels = (char*)mmap(NULL, width * height * 3, PROT_READ | PROT_WRITE, MAP_SHARED, fd, 0);
 extern struct fb_var_screeninfo vinfo;
+// void show_bitmap(char *filename, int x, int y)
+// {
+//     int fb; // BMP 文件描述符
+//     BITMAPFILEHEADER file_header;
+//     BITMAPINFOHEADER info_header;
+//     // 打开 BMP 文件并读取文件头和信息头
+//     fb = open(filename, O_RDONLY);
+//     if (fb == -1)
+//     {
+//         perror("open bmp file");
+//         close(fd);
+//         return;
+//     }
+//     lseek(fb, 0, SEEK_SET);
+//     read(fb, &file_header, sizeof(BITMAPFILEHEADER));
+//     read(fb, &info_header, sizeof(BITMAPINFOHEADER));
+
+//     char buf[info_header.width * info_header.height * 3]; // 存储像素数据
+//     read(fb, buf, sizeof(buf));
+
+//     // 限制范围
+//     // if (x < 0)
+//     //     x = 0;
+//     // if (y < 0)
+//     //     y = 0;
+//     // if (x + info_header.width > info_header.width)
+//     //     x = vinfo.width - info_header.width;
+//     // if (y + info_header.height > info_header.height)
+//     //     y = vinfo.height - info_header.height;
+
+//     int color = 0;
+//     int tmp;
+//     for (int i = 0; i < info_header.height; i++)
+//     {
+//         for (int j = 0; j < info_header.width; j++)
+//         {
+//             tmp = i * 3;
+//             color = buf[tmp] | buf[tmp + 1] << 8 | buf[tmp + 2] << 16;
+//             LCD_Draw_point(j + x, info_header.height - 1 - i + y, color);
+//         }
+//     }
+
+//     close(fb);
+//     // close(fd);
+// }
+
 void show_bitmap(char *filename, int x, int y)
 {
-    int fb; // BMP 文件描述符
-    BITMAPFILEHEADER file_header;
-    BITMAPINFOHEADER info_header;
-    // 打开 BMP 文件并读取文件头和信息头
-    fb = open(filename, O_RDONLY);
-    if (fb == -1)
+    int fd;
+    fd = open(filename, O_RDONLY);
+
+    lseek(fd, 0x12, SEEK_SET);
+    int w;
+    read(fd, &w, 4); // 读取的是图片的宽度
+
+    int h;
+    read(fd, &h, 4); // 读取的是图片的高度
+
+    lseek(fd, 54, SEEK_SET);
+    char buf[w * h * 3];
+    read(fd, buf, w * h * 3);
+
+    int color, tmp;
+    for (int i = 0; i < h; i++)
     {
-        perror("open bmp file");
-        close(fd);
-        return;
-    }
-    lseek(fb, 0, SEEK_SET);
-    read(fb, &file_header, sizeof(BITMAPFILEHEADER));
-    read(fb, &info_header, sizeof(BITMAPINFOHEADER));
-
-    char buf[info_header.width * info_header.height * 3]; // 存储像素数据
-    read(fb, buf, sizeof(buf));
-
-    // 限制范围
-    if (x < 0)
-        x = 0;
-    if (y < 0)
-        y = 0;
-    if (x + info_header.width > info_header.width)
-        x = vinfo.width - info_header.width;
-    if (y + info_header.height > info_header.height)
-        y = vinfo.height - info_header.height;
-
-    int color = 0;
-    int tmp;
-    for (int i = 0; i < info_header.height; i++)
-    {
-        for (int j = 0; j < info_header.width; j++)
+        for (int j = 0; j < w; j++)
         {
             tmp = i * 3;
             color = buf[tmp] | buf[tmp + 1] << 8 | buf[tmp + 2] << 16;
-            LCD_Draw_point(j + x, info_header.height - 1 - i + y, color);
+            LCD_Draw_point(j, i, color);
         }
     }
-
-    close(fb);
-    // close(fd);
 }
-
 // int show_bitmap(int x, int y, char *file_name)
 // {
 //     // 打开 LCD 设备文件

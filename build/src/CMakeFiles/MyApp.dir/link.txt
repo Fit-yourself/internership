@@ -1,0 +1,1 @@
+/home/flower/.local/arm-linux-gcc/bin/arm-linux-gcc -O3 -DNDEBUG CMakeFiles/MyApp.dir/bitmap_math.c.o CMakeFiles/MyApp.dir/systerm.c.o -o ../../bin/MyApp  ../lib/libMyLibrary.a -lm -lrt -lpthread 

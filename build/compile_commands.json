@@ -1,27 +1,42 @@
 [
 {
-  "directory": "/home/flower/YueQian/build",
-  "command": "/home/flower/.local/arm-linux-gcc/bin/arm-linux-gcc  -I/home/flower/YueQian/inc -O3 -DNDEBUG -o CMakeFiles/lcd_tools.c_s.dir/lib/lcd_tools.c.o -c /home/flower/YueQian/lib/lcd_tools.c",
-  "file": "/home/flower/YueQian/lib/lcd_tools.c"
+  "directory": "/home/flower/YueQian/build/lib",
+  "command": "/home/flower/.local/arm-linux-gcc/bin/arm-linux-gcc  -I/home/flower/YueQian/inc -O3 -DNDEBUG -o CMakeFiles/MyLibrary.dir/LED.c.o -c /home/flower/YueQian/lib/LED.c",
+  "file": "/home/flower/YueQian/lib/LED.c"
 },
 {
-  "directory": "/home/flower/YueQian/build",
-  "command": "/home/flower/.local/arm-linux-gcc/bin/arm-linux-gcc  -I/home/flower/YueQian/inc -O3 -DNDEBUG -o CMakeFiles/lcd_bitmap.c_s.dir/lib/lcd_bitmap.c.o -c /home/flower/YueQian/lib/lcd_bitmap.c",
+  "directory": "/home/flower/YueQian/build/lib",
+  "command": "/home/flower/.local/arm-linux-gcc/bin/arm-linux-gcc  -I/home/flower/YueQian/inc -O3 -DNDEBUG -o CMakeFiles/MyLibrary.dir/beep.c.o -c /home/flower/YueQian/lib/beep.c",
+  "file": "/home/flower/YueQian/lib/beep.c"
+},
+{
+  "directory": "/home/flower/YueQian/build/lib",
+  "command": "/home/flower/.local/arm-linux-gcc/bin/arm-linux-gcc  -I/home/flower/YueQian/inc -O3 -DNDEBUG -o CMakeFiles/MyLibrary.dir/lcd_bitmap.c.o -c /home/flower/YueQian/lib/lcd_bitmap.c",
   "file": "/home/flower/YueQian/lib/lcd_bitmap.c"
 },
 {
-  "directory": "/home/flower/YueQian/build",
-  "command": "/home/flower/.local/arm-linux-gcc/bin/arm-linux-gcc  -I/home/flower/YueQian/inc -O3 -DNDEBUG -o CMakeFiles/lcd_touch.c_s.dir/lib/lcd_touch.c.o -c /home/flower/YueQian/lib/lcd_touch.c",
+  "directory": "/home/flower/YueQian/build/lib",
+  "command": "/home/flower/.local/arm-linux-gcc/bin/arm-linux-gcc  -I/home/flower/YueQian/inc -O3 -DNDEBUG -o CMakeFiles/MyLibrary.dir/lcd_tools.c.o -c /home/flower/YueQian/lib/lcd_tools.c",
+  "file": "/home/flower/YueQian/lib/lcd_tools.c"
+},
+{
+  "directory": "/home/flower/YueQian/build/lib",
+  "command": "/home/flower/.local/arm-linux-gcc/bin/arm-linux-gcc  -I/home/flower/YueQian/inc -O3 -DNDEBUG -o CMakeFiles/MyLibrary.dir/lcd_touch.c.o -c /home/flower/YueQian/lib/lcd_touch.c",
   "file": "/home/flower/YueQian/lib/lcd_touch.c"
 },
 {
-  "directory": "/home/flower/YueQian/build",
-  "command": "/home/flower/.local/arm-linux-gcc/bin/arm-linux-gcc  -I/home/flower/YueQian/inc -O3 -DNDEBUG -o CMakeFiles/touch.dir/src/show_bitmap.c.o -c /home/flower/YueQian/src/show_bitmap.c",
-  "file": "/home/flower/YueQian/src/show_bitmap.c"
+  "directory": "/home/flower/YueQian/build/lib",
+  "command": "/home/flower/.local/arm-linux-gcc/bin/arm-linux-gcc  -I/home/flower/YueQian/inc -O3 -DNDEBUG -o CMakeFiles/MyLibrary.dir/serial.c.o -c /home/flower/YueQian/lib/serial.c",
+  "file": "/home/flower/YueQian/lib/serial.c"
 },
 {
-  "directory": "/home/flower/YueQian/build",
-  "command": "/home/flower/.local/arm-linux-gcc/bin/arm-linux-gcc  -I/home/flower/YueQian/inc -O3 -DNDEBUG -o CMakeFiles/touch.dir/src/systerm.c.o -c /home/flower/YueQian/src/systerm.c",
+  "directory": "/home/flower/YueQian/build/src",
+  "command": "/home/flower/.local/arm-linux-gcc/bin/arm-linux-gcc  -I/home/flower/YueQian/inc -O3 -DNDEBUG -o CMakeFiles/MyApp.dir/bitmap_math.c.o -c /home/flower/YueQian/src/bitmap_math.c",
+  "file": "/home/flower/YueQian/src/bitmap_math.c"
+},
+{
+  "directory": "/home/flower/YueQian/build/src",
+  "command": "/home/flower/.local/arm-linux-gcc/bin/arm-linux-gcc  -I/home/flower/YueQian/inc -O3 -DNDEBUG -o CMakeFiles/MyApp.dir/systerm.c.o -c /home/flower/YueQian/src/systerm.c",
   "file": "/home/flower/YueQian/src/systerm.c"
 }
 ]

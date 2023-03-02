@@ -7,6 +7,16 @@
         "input.h": "c",
         "bitmap.h": "c",
         "string.h": "c",
-        "exception": "c"
+        "exception": "c",
+        "math.h": "c",
+        "stdlib.h": "c",
+        "termios.h": "c",
+        "mman.h": "c",
+        "serial.h": "c",
+        "fb.h": "c",
+        "fonts.h": "c",
+        "errno.h": "c",
+        "led.h": "c",
+        "beep.h": "c"
     }
 }

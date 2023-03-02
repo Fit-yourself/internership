@@ -1,0 +1,2 @@
+/home/flower/.local/arm-linux-gcc/bin/arm-linux-ar qc libMyLibrary.a CMakeFiles/MyLibrary.dir/LED.c.o CMakeFiles/MyLibrary.dir/beep.c.o CMakeFiles/MyLibrary.dir/lcd_bitmap.c.o CMakeFiles/MyLibrary.dir/lcd_tools.c.o CMakeFiles/MyLibrary.dir/lcd_touch.c.o CMakeFiles/MyLibrary.dir/serial.c.o
+/home/flower/.local/arm-linux-gcc/bin/arm-linux-ranlib libMyLibrary.a
