@@ -403,90 +403,17 @@ void slip_method(int fd_touch, Touch_info *info)
         }
     }
 }
-// void slip_method(int fd_touch, Touch_info *info)
-// {
-//     static int start_x = 0;
-//     static int start_y = 0;
-//     static int end_x = 0;
-//     static int end_y = 0;
-//     static int is_sliding = 0;
 
-//     int ret = 0;
-
-//     if (info->type == TOUCH_DOWN)
-//     {
-//         start_x = info->x;
-//             start_y = info->y;
-//         is_sliding = 1;
-//     }
-//     else if (info->type == TOUCH_UP && is_sliding)
-//     {
-//         end_x = info->x;
-//         end_y = info->y;
-//         int dx = end_x - start_x;
-//         int dy = end_y - start_y;
-
-//         if (abs(dx) > abs(dy) && dx > 0)
-//         {
-//             // 向右滑动
-//             ret = slide_right(board);
-//         }
-//         else if (abs(dx) > abs(dy) && dx < 0)
-//         {
-//             // 向左滑动
-//             ret = slide_left(board);
-//         }
-//         else if (abs(dy) > abs(dx) && dy > 0)
-//         {
-//             // 向下滑动
-//             ret = slide_down(board);
-//         }
-//         else if (abs(dy) > abs(dx) && dy < 0)
-//         {
-//             // 向上滑动
-//             ret = slide_up(board);
-//         }
-//         is_sliding = 0;
-//     }
-//     if (ret)
-//     {
-//         generate_random(board);
-//         // print_board(board);
-//     }
-//     if (check_game_over(board))
-//     {
-//         game_over = 1;
-//         printf("Game over! Your score is %d.\n", score);
-//     }
-// }
-// 创建线程，实现触摸屏 输入事件处理
-// void *slip_input_thread(void *arg)
-// {
-//     int fd = *(int *)arg;
-//     Touch_info info = {0, 0};
-
-//     while (1)
-//     {
-//         // if (Touch_get(fd, &info) != 0)
-//         //     continue;
-//         slip_method(fd, &info); // 检查按键按下
-//     }
-//     return NULL;
-// }
-#include <stdio.h>
-void signal_handler(int signo)
+void signal_handler(int signo) // 进行 `ctrl + c` 后的分数显示
 {
-    // printf("Received signal %d, exiting...\n", signo);
     printf("You exited! Your score is %d.\n", score);
     exit(0);
 }
 int thread_2048(void)
 {
 
-    // pthread_t thread_id_touch; // 触摸屏线程
     Touch_info info = {0, 0};
     int fd_touch = Touch_init();
-    // pthread_create(&thread_id_touch, NULL, slip_input_thread, &fd_touch);
     srand(time(NULL));
 
     signal(SIGINT, signal_handler);
@@ -495,7 +422,6 @@ int thread_2048(void)
 
     while (!game_over)
     {
-        // slip_input_thread(&fd_touch);
         slip_method(fd_touch, &info); // 业务逻辑
         if (game_over == 1)
         {

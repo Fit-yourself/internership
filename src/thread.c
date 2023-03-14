@@ -57,26 +57,6 @@ int main_thread()
     pthread_create(&thread_id_mq2, NULL, mq2_thread, &fd_mq2);
     pthread_create(&thread_id_gy39, NULL, gy39_thread, &fd_gy39);
 
-    // 等待MQ2消息
-    // pthread_mutex_lock(&mq2_mutex);
-    // while (!mq2_message_ready)
-    // {
-    //     pthread_cond_wait(&mq2_cond, &mq2_mutex);
-    // }
-    /* Processing msg */
-    // MQ2_layout_display(&nd);
-    // pthread_mutex_unlock(&mq2_mutex);
-
-    // 等待海拔消息
-    // pthread_mutex_lock(&gy39_mutex);
-    // while (!mq2_message_ready)
-    // {
-    //     pthread_cond_wait(&mq2_cond, &gy39_mutex);
-    // }
-    // /* Processing msg */
-    // GY39_layout_display(&GY39_data);
-    // pthread_mutex_unlock(&gy39_mutex);
-
     return 0;
 }
 // 创建线程，实现触摸屏 输入事件处理
@@ -100,7 +80,6 @@ void *gy39_thread(void *arg)
     int time = 0; // 初始化计数器
     int mode = 1;
     GY39_mod(fd_gy39, mode); // 设置模式
-    // sleep(3);
     GY39_read(fd_gy39, &GY39_data); // 激活
     printf("wait for GY39 to start\n");
     sleep(1);
@@ -213,108 +192,27 @@ void GY39_layout_display(GY39_DATA *data)
 }
 // #define START_Music "START"
 // #define STOP_Music "STOP"
+#include <stdbool.h>
+#define MP3_FILE "mm.mp3"
+#include "header.h" 
 #define START 1 // 暂停/播放 切换
 #define STOP 0
 #define Continue 2
-#define BUTTONS_NUM 1
+#define BUTTONS_NUM 1 // 按钮数量
 Button button[BUTTONS_NUM] = {
-    {x_play_BMP, y_play_BMP, x_play_BMP + 65, y_play_BMP + 65, START},
-    // {200, 0, 400, 200, STOP_Music},
-    // {0, 200, 200, 400, SHIFT_Music},
-    // {200, 200, 400, 400, "Continue"},
+    {x_play_BMP, y_play_BMP, x_play_BMP + 65, y_play_BMP + 65, START}, // 音乐播放按键坐标 为一个控件
 };
 // TODO
-#include <stdbool.h>
-#define MP3_FILE "mm.mp3"
-#include "header.h"
-// void buttons_method(Touch_info *info)
-// {
-//     static int button_status[BUTTONS_NUM] = {0};
-//     static int is_paused = 0;
-//     static int debounce = 30;
-//     for (int i = 0; i < BUTTONS_NUM; i++)
-//     {
-//         if (info->x > button[i].x0 && info->x < button[i].x1 && info->y > button[i].y0 && info->y < button[i].y1)
-//         {
-//             if(debounce){
-//                 debounce--;
-//             }
-
-//             switch (button[i].status)
-//             {
-//             case START:
-//                 button[i].status = STOP; // 下一次点击就是
-//                 LCD_DrawBmp(play_BMP, x_play_BMP, y_play_BMP, 0);
-//                 break;
-//             case STOP:
-//                 button[i].status = Continue;
-//                 // system("killall -STOP madplay");
-//                 LCD_DrawBmp(pause_BMP, x_play_BMP, y_play_BMP, 0);
-//                 break;
-//             case Continue:
-//                 // system("killall -CONT madplay");
-//                 button[i].status = STOP; // 播放
-//                 LCD_DrawBmp(play_BMP, x_play_BMP, y_play_BMP, 0);
-//                 break;
-//             default:
-//                 break;
-//             }
-//             debounce = 25;
-//             // 播放 / 暂停 mp3
-//             // if (button_status[i] == 0) // 待播放
-//             // {
-//             //     button_status[i] = 1;
-//             //     LCD_DrawBmp(play_BMP,x_play_BMP, y_play_BMP, 0);
-//             //     if (is_paused)
-//             //     {
-//             //         system("killall -CONT madplay");
-//             //         is_paused = false;
-//             //     }
-//             //     else // 如果此时没有暂停，那么就是第一次播放
-//             //     {
-//             //         system("madplay -Q " MP3_FILE);
-
-//             //     }
-//             // }
-//             // else
-//             // {
-//             //     button_status[i] = 0;
-//             //     LCD_DrawBmp(pause_BMP, 0, 0, 0);
-//             //     // 暂停播放音乐
-//             //     // system("killall -STOP madplay");
-//             //     if (!is_paused)
-//             //     {
-//             //          system("killall -STOP madplay");
-//             //         is_paused = true;
-//             //     }
-//             // }
-//             // else if (button[i].info == STOP_Music)
-//             // {
-//             //     /* code */
-//             // }
-//             // else if (button[i].info == SHIFT_Music)
-//             // {
-//             //     /* code */
-//             // }
-//         }
-//         // else
-//         // {
-//         //     // printf("NO x = %d, y = %d\n", info.x, info.y);
-//         // }
-//     }
-// }
-
-// #define BUTTONS_NUM 4  // 按钮数量
 #define WINDOW_SIZE 5 // 滑动窗口大小
 #define THRESHOLD 2   // 阈值，用于判断是否触发按钮事件
 
-// typedef struct {
-//     int x0;
-//     int x1;
-//     int y0;
-//     int y1;
-//     int status;
-// } Button;
+typedef struct {
+    int x0;
+    int x1;
+    int y0;
+    int y1;
+    int status;
+} Button;
 
 void buttons_method(Touch_info *info)
 {
