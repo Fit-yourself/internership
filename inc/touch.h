@@ -5,7 +5,13 @@
 
 #include <pthread.h>
 #include <linux/input.h>
-#define TOUCH_DEV_PATH "/dev/input/event0"
+typedef enum Direction
+{
+    TOUCH_RIGHT,
+    TOUCH_LEFT,
+    TOUCH_UP,
+    TOUCH_DOWN
+}Direction;
 
 typedef struct 
 {
@@ -13,6 +19,7 @@ typedef struct
     // int is_valid;
     int x;
     int y;
+    Direction type;
 }Touch_info;
 extern Touch_info info;
 
@@ -21,8 +28,10 @@ typedef struct
 {
     int x0, y0;
     int x1, y1;
-    char* info;
+    int status;
 } Button;
 
-void *input_thread(void *arg);
+int Touch_init(void);
+int Touch_get(int fd_touch, Touch_info *info);
 #endif // TOUCH_H
+    

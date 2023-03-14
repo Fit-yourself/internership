@@ -4,7 +4,7 @@
 # compile C with /home/flower/.local/arm-linux-gcc/bin/arm-linux-gcc
 C_DEFINES = 
 
-C_INCLUDES = -I/home/flower/YueQian/inc
+C_INCLUDES = -I/home/flower/YueQian/inc -I/home/flower/YueQian/src
 
 C_FLAGS = -O3 -DNDEBUG
 

@@ -1,5 +1,4 @@
-lib/CMakeFiles/MyLibrary.dir/lcd_bitmap.c.o: \
- /home/flower/YueQian/lib/lcd_bitmap.c \
+src/CMakeFiles/MyApp.dir/thread.c.o: /home/flower/YueQian/src/thread.c \
  /home/flower/.local/arm-linux-gcc/arm-none-linux-gnueabi/sysroot/usr/include/stdc-predef.h \
  /home/flower/YueQian/inc/header.h \
  /home/flower/.local/arm-linux-gcc/arm-none-linux-gnueabi/sysroot/usr/include/stdio.h \
@@ -77,7 +76,28 @@ lib/CMakeFiles/MyLibrary.dir/lcd_bitmap.c.o: \
  /home/flower/.local/arm-linux-gcc/arm-none-linux-gnueabi/sysroot/usr/include/xlocale.h \
  /home/flower/.local/arm-linux-gcc/arm-none-linux-gnueabi/sysroot/usr/include/bits/string.h \
  /home/flower/.local/arm-linux-gcc/arm-none-linux-gnueabi/sysroot/usr/include/bits/string2.h \
- /home/flower/YueQian/inc/lcd.h /home/flower/YueQian/inc/bitmap.h \
+ /home/flower/YueQian/src/thread.h \
+ /home/flower/.local/arm-linux-gcc/arm-none-linux-gnueabi/sysroot/usr/include/pthread.h \
+ /home/flower/.local/arm-linux-gcc/arm-none-linux-gnueabi/sysroot/usr/include/sched.h \
+ /home/flower/.local/arm-linux-gcc/arm-none-linux-gnueabi/sysroot/usr/include/bits/sched.h \
+ /home/flower/.local/arm-linux-gcc/arm-none-linux-gnueabi/sysroot/usr/include/bits/setjmp.h \
+ /home/flower/YueQian/inc/touch.h /home/flower/YueQian/inc/header.h \
+ /home/flower/.local/arm-linux-gcc/arm-none-linux-gnueabi/sysroot/usr/include/linux/input.h \
+ /home/flower/.local/arm-linux-gcc/arm-none-linux-gnueabi/sysroot/usr/include/sys/time.h \
+ /home/flower/YueQian/inc/GY39.h \
  /home/flower/.local/arm-linux-gcc/lib/gcc/arm-none-linux-gnueabi/5.4.0/include/stdint.h \
  /home/flower/.local/arm-linux-gcc/arm-none-linux-gnueabi/sysroot/usr/include/stdint.h \
- /home/flower/.local/arm-linux-gcc/arm-none-linux-gnueabi/sysroot/usr/include/bits/wchar.h
+ /home/flower/.local/arm-linux-gcc/arm-none-linux-gnueabi/sysroot/usr/include/bits/wchar.h \
+ /home/flower/YueQian/inc/MQ2.h /home/flower/YueQian/inc/bitmap.h \
+ /home/flower/YueQian/inc/lcd.h \
+ /home/flower/.local/arm-linux-gcc/arm-none-linux-gnueabi/sysroot/usr/include/signal.h \
+ /home/flower/.local/arm-linux-gcc/arm-none-linux-gnueabi/sysroot/usr/include/bits/signum.h \
+ /home/flower/.local/arm-linux-gcc/arm-none-linux-gnueabi/sysroot/usr/include/bits/siginfo.h \
+ /home/flower/.local/arm-linux-gcc/arm-none-linux-gnueabi/sysroot/usr/include/bits/sigaction.h \
+ /home/flower/.local/arm-linux-gcc/arm-none-linux-gnueabi/sysroot/usr/include/bits/sigcontext.h \
+ /home/flower/.local/arm-linux-gcc/arm-none-linux-gnueabi/sysroot/usr/include/asm/sigcontext.h \
+ /home/flower/.local/arm-linux-gcc/arm-none-linux-gnueabi/sysroot/usr/include/bits/sigstack.h \
+ /home/flower/.local/arm-linux-gcc/arm-none-linux-gnueabi/sysroot/usr/include/sys/ucontext.h \
+ /home/flower/.local/arm-linux-gcc/arm-none-linux-gnueabi/sysroot/usr/include/bits/sigthread.h \
+ /home/flower/YueQian/inc/mode.h \
+ /home/flower/.local/arm-linux-gcc/lib/gcc/arm-none-linux-gnueabi/5.4.0/include/stdbool.h

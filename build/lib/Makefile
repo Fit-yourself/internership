@@ -178,6 +178,30 @@ LED.c.s:
 	cd /home/flower/YueQian/build && $(MAKE) $(MAKESILENT) -f lib/CMakeFiles/MyLibrary.dir/build.make lib/CMakeFiles/MyLibrary.dir/LED.c.s
 .PHONY : LED.c.s
 
+MQ2.o: MQ2.c.o
+.PHONY : MQ2.o
+
+# target to build an object file
+MQ2.c.o:
+	cd /home/flower/YueQian/build && $(MAKE) $(MAKESILENT) -f lib/CMakeFiles/MyLibrary.dir/build.make lib/CMakeFiles/MyLibrary.dir/MQ2.c.o
+.PHONY : MQ2.c.o
+
+MQ2.i: MQ2.c.i
+.PHONY : MQ2.i
+
+# target to preprocess a source file
+MQ2.c.i:
+	cd /home/flower/YueQian/build && $(MAKE) $(MAKESILENT) -f lib/CMakeFiles/MyLibrary.dir/build.make lib/CMakeFiles/MyLibrary.dir/MQ2.c.i
+.PHONY : MQ2.c.i
+
+MQ2.s: MQ2.c.s
+.PHONY : MQ2.s
+
+# target to generate assembly for a file
+MQ2.c.s:
+	cd /home/flower/YueQian/build && $(MAKE) $(MAKESILENT) -f lib/CMakeFiles/MyLibrary.dir/build.make lib/CMakeFiles/MyLibrary.dir/MQ2.c.s
+.PHONY : MQ2.c.s
+
 beep.o: beep.c.o
 .PHONY : beep.o
 
@@ -202,53 +226,29 @@ beep.c.s:
 	cd /home/flower/YueQian/build && $(MAKE) $(MAKESILENT) -f lib/CMakeFiles/MyLibrary.dir/build.make lib/CMakeFiles/MyLibrary.dir/beep.c.s
 .PHONY : beep.c.s
 
-lcd_bitmap.o: lcd_bitmap.c.o
-.PHONY : lcd_bitmap.o
+lcd.o: lcd.c.o
+.PHONY : lcd.o
 
 # target to build an object file
-lcd_bitmap.c.o:
-	cd /home/flower/YueQian/build && $(MAKE) $(MAKESILENT) -f lib/CMakeFiles/MyLibrary.dir/build.make lib/CMakeFiles/MyLibrary.dir/lcd_bitmap.c.o
-.PHONY : lcd_bitmap.c.o
+lcd.c.o:
+	cd /home/flower/YueQian/build && $(MAKE) $(MAKESILENT) -f lib/CMakeFiles/MyLibrary.dir/build.make lib/CMakeFiles/MyLibrary.dir/lcd.c.o
+.PHONY : lcd.c.o
 
-lcd_bitmap.i: lcd_bitmap.c.i
-.PHONY : lcd_bitmap.i
-
-# target to preprocess a source file
-lcd_bitmap.c.i:
-	cd /home/flower/YueQian/build && $(MAKE) $(MAKESILENT) -f lib/CMakeFiles/MyLibrary.dir/build.make lib/CMakeFiles/MyLibrary.dir/lcd_bitmap.c.i
-.PHONY : lcd_bitmap.c.i
-
-lcd_bitmap.s: lcd_bitmap.c.s
-.PHONY : lcd_bitmap.s
-
-# target to generate assembly for a file
-lcd_bitmap.c.s:
-	cd /home/flower/YueQian/build && $(MAKE) $(MAKESILENT) -f lib/CMakeFiles/MyLibrary.dir/build.make lib/CMakeFiles/MyLibrary.dir/lcd_bitmap.c.s
-.PHONY : lcd_bitmap.c.s
-
-lcd_tools.o: lcd_tools.c.o
-.PHONY : lcd_tools.o
-
-# target to build an object file
-lcd_tools.c.o:
-	cd /home/flower/YueQian/build && $(MAKE) $(MAKESILENT) -f lib/CMakeFiles/MyLibrary.dir/build.make lib/CMakeFiles/MyLibrary.dir/lcd_tools.c.o
-.PHONY : lcd_tools.c.o
-
-lcd_tools.i: lcd_tools.c.i
-.PHONY : lcd_tools.i
+lcd.i: lcd.c.i
+.PHONY : lcd.i
 
 # target to preprocess a source file
-lcd_tools.c.i:
-	cd /home/flower/YueQian/build && $(MAKE) $(MAKESILENT) -f lib/CMakeFiles/MyLibrary.dir/build.make lib/CMakeFiles/MyLibrary.dir/lcd_tools.c.i
-.PHONY : lcd_tools.c.i
+lcd.c.i:
+	cd /home/flower/YueQian/build && $(MAKE) $(MAKESILENT) -f lib/CMakeFiles/MyLibrary.dir/build.make lib/CMakeFiles/MyLibrary.dir/lcd.c.i
+.PHONY : lcd.c.i
 
-lcd_tools.s: lcd_tools.c.s
-.PHONY : lcd_tools.s
+lcd.s: lcd.c.s
+.PHONY : lcd.s
 
 # target to generate assembly for a file
-lcd_tools.c.s:
-	cd /home/flower/YueQian/build && $(MAKE) $(MAKESILENT) -f lib/CMakeFiles/MyLibrary.dir/build.make lib/CMakeFiles/MyLibrary.dir/lcd_tools.c.s
-.PHONY : lcd_tools.c.s
+lcd.c.s:
+	cd /home/flower/YueQian/build && $(MAKE) $(MAKESILENT) -f lib/CMakeFiles/MyLibrary.dir/build.make lib/CMakeFiles/MyLibrary.dir/lcd.c.s
+.PHONY : lcd.c.s
 
 lcd_touch.o: lcd_touch.c.o
 .PHONY : lcd_touch.o
@@ -313,15 +313,15 @@ help:
 	@echo "... LED.o"
 	@echo "... LED.i"
 	@echo "... LED.s"
+	@echo "... MQ2.o"
+	@echo "... MQ2.i"
+	@echo "... MQ2.s"
 	@echo "... beep.o"
 	@echo "... beep.i"
 	@echo "... beep.s"
-	@echo "... lcd_bitmap.o"
-	@echo "... lcd_bitmap.i"
-	@echo "... lcd_bitmap.s"
-	@echo "... lcd_tools.o"
-	@echo "... lcd_tools.i"
-	@echo "... lcd_tools.s"
+	@echo "... lcd.o"
+	@echo "... lcd.i"
+	@echo "... lcd.s"
 	@echo "... lcd_touch.o"
 	@echo "... lcd_touch.i"
 	@echo "... lcd_touch.s"

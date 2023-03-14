@@ -69,48 +69,64 @@ include src/CMakeFiles/MyApp.dir/progress.make
 # Include the compile flags for this target's objects.
 include src/CMakeFiles/MyApp.dir/flags.make
 
-src/CMakeFiles/MyApp.dir/bitmap_math.c.o: src/CMakeFiles/MyApp.dir/flags.make
-src/CMakeFiles/MyApp.dir/bitmap_math.c.o: ../src/bitmap_math.c
-src/CMakeFiles/MyApp.dir/bitmap_math.c.o: src/CMakeFiles/MyApp.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/flower/YueQian/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building C object src/CMakeFiles/MyApp.dir/bitmap_math.c.o"
-	cd /home/flower/YueQian/build/src && /home/flower/.local/arm-linux-gcc/bin/arm-linux-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT src/CMakeFiles/MyApp.dir/bitmap_math.c.o -MF CMakeFiles/MyApp.dir/bitmap_math.c.o.d -o CMakeFiles/MyApp.dir/bitmap_math.c.o -c /home/flower/YueQian/src/bitmap_math.c
+src/CMakeFiles/MyApp.dir/2048.c.o: src/CMakeFiles/MyApp.dir/flags.make
+src/CMakeFiles/MyApp.dir/2048.c.o: ../src/2048.c
+src/CMakeFiles/MyApp.dir/2048.c.o: src/CMakeFiles/MyApp.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/flower/YueQian/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building C object src/CMakeFiles/MyApp.dir/2048.c.o"
+	cd /home/flower/YueQian/build/src && /home/flower/.local/arm-linux-gcc/bin/arm-linux-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT src/CMakeFiles/MyApp.dir/2048.c.o -MF CMakeFiles/MyApp.dir/2048.c.o.d -o CMakeFiles/MyApp.dir/2048.c.o -c /home/flower/YueQian/src/2048.c
 
-src/CMakeFiles/MyApp.dir/bitmap_math.c.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/MyApp.dir/bitmap_math.c.i"
-	cd /home/flower/YueQian/build/src && /home/flower/.local/arm-linux-gcc/bin/arm-linux-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/flower/YueQian/src/bitmap_math.c > CMakeFiles/MyApp.dir/bitmap_math.c.i
+src/CMakeFiles/MyApp.dir/2048.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/MyApp.dir/2048.c.i"
+	cd /home/flower/YueQian/build/src && /home/flower/.local/arm-linux-gcc/bin/arm-linux-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/flower/YueQian/src/2048.c > CMakeFiles/MyApp.dir/2048.c.i
 
-src/CMakeFiles/MyApp.dir/bitmap_math.c.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/MyApp.dir/bitmap_math.c.s"
-	cd /home/flower/YueQian/build/src && /home/flower/.local/arm-linux-gcc/bin/arm-linux-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/flower/YueQian/src/bitmap_math.c -o CMakeFiles/MyApp.dir/bitmap_math.c.s
+src/CMakeFiles/MyApp.dir/2048.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/MyApp.dir/2048.c.s"
+	cd /home/flower/YueQian/build/src && /home/flower/.local/arm-linux-gcc/bin/arm-linux-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/flower/YueQian/src/2048.c -o CMakeFiles/MyApp.dir/2048.c.s
 
-src/CMakeFiles/MyApp.dir/systerm.c.o: src/CMakeFiles/MyApp.dir/flags.make
-src/CMakeFiles/MyApp.dir/systerm.c.o: ../src/systerm.c
-src/CMakeFiles/MyApp.dir/systerm.c.o: src/CMakeFiles/MyApp.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/flower/YueQian/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building C object src/CMakeFiles/MyApp.dir/systerm.c.o"
-	cd /home/flower/YueQian/build/src && /home/flower/.local/arm-linux-gcc/bin/arm-linux-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT src/CMakeFiles/MyApp.dir/systerm.c.o -MF CMakeFiles/MyApp.dir/systerm.c.o.d -o CMakeFiles/MyApp.dir/systerm.c.o -c /home/flower/YueQian/src/systerm.c
+src/CMakeFiles/MyApp.dir/main.c.o: src/CMakeFiles/MyApp.dir/flags.make
+src/CMakeFiles/MyApp.dir/main.c.o: ../src/main.c
+src/CMakeFiles/MyApp.dir/main.c.o: src/CMakeFiles/MyApp.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/flower/YueQian/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building C object src/CMakeFiles/MyApp.dir/main.c.o"
+	cd /home/flower/YueQian/build/src && /home/flower/.local/arm-linux-gcc/bin/arm-linux-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT src/CMakeFiles/MyApp.dir/main.c.o -MF CMakeFiles/MyApp.dir/main.c.o.d -o CMakeFiles/MyApp.dir/main.c.o -c /home/flower/YueQian/src/main.c
 
-src/CMakeFiles/MyApp.dir/systerm.c.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/MyApp.dir/systerm.c.i"
-	cd /home/flower/YueQian/build/src && /home/flower/.local/arm-linux-gcc/bin/arm-linux-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/flower/YueQian/src/systerm.c > CMakeFiles/MyApp.dir/systerm.c.i
+src/CMakeFiles/MyApp.dir/main.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/MyApp.dir/main.c.i"
+	cd /home/flower/YueQian/build/src && /home/flower/.local/arm-linux-gcc/bin/arm-linux-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/flower/YueQian/src/main.c > CMakeFiles/MyApp.dir/main.c.i
 
-src/CMakeFiles/MyApp.dir/systerm.c.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/MyApp.dir/systerm.c.s"
-	cd /home/flower/YueQian/build/src && /home/flower/.local/arm-linux-gcc/bin/arm-linux-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/flower/YueQian/src/systerm.c -o CMakeFiles/MyApp.dir/systerm.c.s
+src/CMakeFiles/MyApp.dir/main.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/MyApp.dir/main.c.s"
+	cd /home/flower/YueQian/build/src && /home/flower/.local/arm-linux-gcc/bin/arm-linux-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/flower/YueQian/src/main.c -o CMakeFiles/MyApp.dir/main.c.s
+
+src/CMakeFiles/MyApp.dir/thread.c.o: src/CMakeFiles/MyApp.dir/flags.make
+src/CMakeFiles/MyApp.dir/thread.c.o: ../src/thread.c
+src/CMakeFiles/MyApp.dir/thread.c.o: src/CMakeFiles/MyApp.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/flower/YueQian/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building C object src/CMakeFiles/MyApp.dir/thread.c.o"
+	cd /home/flower/YueQian/build/src && /home/flower/.local/arm-linux-gcc/bin/arm-linux-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT src/CMakeFiles/MyApp.dir/thread.c.o -MF CMakeFiles/MyApp.dir/thread.c.o.d -o CMakeFiles/MyApp.dir/thread.c.o -c /home/flower/YueQian/src/thread.c
+
+src/CMakeFiles/MyApp.dir/thread.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/MyApp.dir/thread.c.i"
+	cd /home/flower/YueQian/build/src && /home/flower/.local/arm-linux-gcc/bin/arm-linux-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/flower/YueQian/src/thread.c > CMakeFiles/MyApp.dir/thread.c.i
+
+src/CMakeFiles/MyApp.dir/thread.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/MyApp.dir/thread.c.s"
+	cd /home/flower/YueQian/build/src && /home/flower/.local/arm-linux-gcc/bin/arm-linux-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/flower/YueQian/src/thread.c -o CMakeFiles/MyApp.dir/thread.c.s
 
 # Object files for target MyApp
 MyApp_OBJECTS = \
-"CMakeFiles/MyApp.dir/bitmap_math.c.o" \
-"CMakeFiles/MyApp.dir/systerm.c.o"
+"CMakeFiles/MyApp.dir/2048.c.o" \
+"CMakeFiles/MyApp.dir/main.c.o" \
+"CMakeFiles/MyApp.dir/thread.c.o"
 
 # External object files for target MyApp
 MyApp_EXTERNAL_OBJECTS =
 
-../bin/MyApp: src/CMakeFiles/MyApp.dir/bitmap_math.c.o
-../bin/MyApp: src/CMakeFiles/MyApp.dir/systerm.c.o
+../bin/MyApp: src/CMakeFiles/MyApp.dir/2048.c.o
+../bin/MyApp: src/CMakeFiles/MyApp.dir/main.c.o
+../bin/MyApp: src/CMakeFiles/MyApp.dir/thread.c.o
 ../bin/MyApp: src/CMakeFiles/MyApp.dir/build.make
 ../bin/MyApp: lib/libMyLibrary.a
 ../bin/MyApp: src/CMakeFiles/MyApp.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/flower/YueQian/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Linking C executable ../../bin/MyApp"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/flower/YueQian/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Linking C executable ../../bin/MyApp"
 	cd /home/flower/YueQian/build/src && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/MyApp.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.

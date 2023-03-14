@@ -1,30 +1,24 @@
-#ifndef _LCD_H_
-#define _LCD_H_
+#ifndef __LCD_H
+#define __LCD_H
 
-extern struct fb_var_screeninfo vinfo;
-extern struct fb_fix_screeninfo finfo;
-extern char *fbp;
-extern long int screensize;
-extern int fbfd;
-
-#define WHITE 0xffffff
-/* LCD */
-int LCD_init(void);
-void LCD_exit(void);
+extern void LCD_Init();
+extern void LCD_DeInit();
+extern void LCD_DrawPoint(int x,int y,int color);
+extern void LCD_DrawRect(int x,int y,int w,int h,int color);
+extern void LCD_DrawCircle(int x,int y,int r,int color);
+extern void LCD_DrawEllipse(int x,int y,int a,int b,int color);
+extern void LCD_DrawWord(int x0,int y0,int w,int h,char *data,int color);
+extern void LCD_DrawTriangle(int x1,int y1,int x2,int y2,int x3,int y3,int color);
+extern void LCD_DrawBmp(const char *bmpname, int x,int y,int flag);
+extern void LCD_DrawNum(int num,int x,int y,int color);
+extern void LCD_name();
+extern void LCD_yanwu();
+extern void LCD_guangzhao();
+extern void LCD_wendu();
+extern void LCD_haiba();
+extern void LCD_qiya();
+extern void LCD_shidu();
 void LCD_Clear(int color);
-int LCD_Draw_point(int x, int y, int color);
-void LCD_Draw_line(int x0, int y0, int x1, int y1, int color);
-int LCD_Draw_rect(int x1, int y1, int x2, int y2, int color);
-void LCD_Draw_circle(int xc, int yc, int r, int color);
-void LCD_Draw_ellipse(int xc, int yc, int a, int b, int color);
-void LCD_Draw_arc(int xc, int yc, int r, int start_angle, int end_angle, int color);
-void LCD_Draw_polygon(int x[], int y[], int n, int color);
-void LCD_Fill_circle(int xc, int yc, int r, int color);
-void LCD_Fill_ellipse(int xc, int yc, int a, int b, int color);
+// void LCD_DrawWord(int x0, int y0, int w, int h, const char *data, int color);
 
-void LCD_Draw_Font(const unsigned char font[], int x, int y, int color);
-// void LCD_Draw_Num(int x, int y, int num, int color);
-// void LCD_Draw_Number(int x, int y, int number, int color);
-#define LCD_Clear_screen() LCD_Clear(WHITE)
-
-#endif // _LCD_H_
+#endif

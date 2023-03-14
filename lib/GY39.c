@@ -55,7 +55,6 @@ int GY39_read(int fd_gy39, GY39_DATA *data)
 {
     // 读取数据
     static GY39 buf;
-    // char buf[32];
     int ret = read(fd_gy39, &buf, sizeof(buf) / sizeof(char));
     if (ret == -1)
     {
@@ -76,8 +75,8 @@ int GY39_read(int fd_gy39, GY39_DATA *data)
             data->temp = (float)((buf.data[0] << 8) | buf.data[1]) / 100;                                              // 温度 C
             data->press = (float)((buf.data[2] << 24) | (buf.data[3] << 16) | (buf.data[4] << 8) | buf.data[5]) / 100; // 气压 pa
             data->humi = (float)((buf.data[6] << 8) | buf.data[7]) / 100;                                              // 湿度 %
-            data->alti = (float)((buf.data[8] << 8) | buf.data[9]);                                                    // 海拔 m
-            break;
+            data->alti = ((buf.data[8] << 8) | buf.data[9]);                                                    // 海拔 m
+            break;  
 
         case 0x55:
             /* IIC 地址 */
@@ -86,6 +85,8 @@ int GY39_read(int fd_gy39, GY39_DATA *data)
         default:
             break;
         }
+    }else{
+        return -1;
     }
 
     // 解析数据

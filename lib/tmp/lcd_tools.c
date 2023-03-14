@@ -125,8 +125,73 @@ int fbfd;
 //         LCD_Draw_Num(x + i * w, y, digit, color);
 //     }
 // }
+int LCD_Draw_String(int x, int y, char *str, int font_color, int bg_color)
+{
+    int char_width = 16; // 字符宽度为 16 像素
+    int char_height = 32; // 字符高度为 32 像素
 
+    while (*str != '\0')
+    {
+        // 逐个字符绘制
+        char ch = *str;
+        for (int i = 0; i < char_height; i++)
+        {
+            for (int j = 0; j < char_width; j++)
+            {
+                if ((font16x32[ch * 64 + i * 2 + j / 8] >> (7 - (j % 8))) & 0x01)
+                {
+                    // 该像素为字符颜色
+                    LCD_Draw_point(x + j, y + i, font_color);
+                }
+                else
+                {
+                    // 该像素为背景颜色
+                    LCD_Draw_point(x + j, y + i, bg_color);
+                }
+            }
+        }
 
+        // 移动光标到下一个字符位置
+        x += char_width;
+        str++;
+    }
+
+    return 0;
+}
+
+// int LCD_Draw_String(int x, int y, char *str, int font_color, int bg_color)
+// {
+//     int char_width = 8; // 字符宽度为 8 像素
+//     int char_height = 16; // 字符高度为 16 像素
+
+//     while (*str != '\0')
+//     {
+//         // 逐个字符绘制
+//         char ch = *str;
+//         for (int i = 0; i < char_height; i++)
+//         {
+//             for (int j = 0; j < char_width; j++)
+//             {
+//                 if ((font8x16[ch * 16 + i] >> (7 - j)) & 0x01)
+//                 {
+//                     // 该像素为字符颜色
+//                     LCD_Draw_point(x + j, y + i, font_color);
+//                 }
+//                 else
+//                 {
+//                     // 该像素为背景颜色
+//                     LCD_Draw_point(x + j, y + i, bg_color);
+//                 }
+//             }
+//         }
+
+//         // 移动光标到下一个字符位置
+//         x += char_width;
+//         str++;
+//     }
+
+//     return 0;
+// }
 int LCD_init(void)
 {
     fbfd = open("/dev/fb0", O_RDWR);
@@ -162,23 +227,7 @@ int LCD_init(void)
     }
     return fbfd;
 }
-void LCD_exit(void)
-{
-    munmap(fbp, screensize);
-    close(fbfd);
-}
 
-
-void LCD_Clear(int color)
-{
-    for (int y = 0; y < vinfo.yres; y++)
-    {
-        for (int x = 0; x < vinfo.xres; x++)
-        {
-            LCD_Draw_point(x, y, color);
-        }
-    }
-}
 int LCD_Draw_point(int x, int y, int color)
 {
     if (x >= vinfo.xres || y >= vinfo.yres)
@@ -190,6 +239,22 @@ int LCD_Draw_point(int x, int y, int color)
     return 0;
 }
 
+void LCD_exit(void)
+{
+    munmap(fbp, screensize);
+    close(fbfd);
+}
+
+void LCD_Clear(int color)
+{
+    for (int y = 0; y < vinfo.yres; y++)
+    {
+        for (int x = 0; x < vinfo.xres; x++)
+        {
+            LCD_Draw_point(x, y, color);
+        }
+    }
+}
 void LCD_Draw_line(int x0, int y0, int x1, int y1, int color)
 {
     int dx = abs(x1 - x0);

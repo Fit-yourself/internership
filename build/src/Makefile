@@ -130,53 +130,77 @@ MyApp/fast:
 	cd /home/flower/YueQian/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/MyApp.dir/build.make src/CMakeFiles/MyApp.dir/build
 .PHONY : MyApp/fast
 
-bitmap_math.o: bitmap_math.c.o
-.PHONY : bitmap_math.o
+2048.o: 2048.c.o
+.PHONY : 2048.o
 
 # target to build an object file
-bitmap_math.c.o:
-	cd /home/flower/YueQian/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/MyApp.dir/build.make src/CMakeFiles/MyApp.dir/bitmap_math.c.o
-.PHONY : bitmap_math.c.o
+2048.c.o:
+	cd /home/flower/YueQian/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/MyApp.dir/build.make src/CMakeFiles/MyApp.dir/2048.c.o
+.PHONY : 2048.c.o
 
-bitmap_math.i: bitmap_math.c.i
-.PHONY : bitmap_math.i
+2048.i: 2048.c.i
+.PHONY : 2048.i
 
 # target to preprocess a source file
-bitmap_math.c.i:
-	cd /home/flower/YueQian/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/MyApp.dir/build.make src/CMakeFiles/MyApp.dir/bitmap_math.c.i
-.PHONY : bitmap_math.c.i
+2048.c.i:
+	cd /home/flower/YueQian/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/MyApp.dir/build.make src/CMakeFiles/MyApp.dir/2048.c.i
+.PHONY : 2048.c.i
 
-bitmap_math.s: bitmap_math.c.s
-.PHONY : bitmap_math.s
+2048.s: 2048.c.s
+.PHONY : 2048.s
 
 # target to generate assembly for a file
-bitmap_math.c.s:
-	cd /home/flower/YueQian/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/MyApp.dir/build.make src/CMakeFiles/MyApp.dir/bitmap_math.c.s
-.PHONY : bitmap_math.c.s
+2048.c.s:
+	cd /home/flower/YueQian/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/MyApp.dir/build.make src/CMakeFiles/MyApp.dir/2048.c.s
+.PHONY : 2048.c.s
 
-systerm.o: systerm.c.o
-.PHONY : systerm.o
+main.o: main.c.o
+.PHONY : main.o
 
 # target to build an object file
-systerm.c.o:
-	cd /home/flower/YueQian/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/MyApp.dir/build.make src/CMakeFiles/MyApp.dir/systerm.c.o
-.PHONY : systerm.c.o
+main.c.o:
+	cd /home/flower/YueQian/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/MyApp.dir/build.make src/CMakeFiles/MyApp.dir/main.c.o
+.PHONY : main.c.o
 
-systerm.i: systerm.c.i
-.PHONY : systerm.i
+main.i: main.c.i
+.PHONY : main.i
 
 # target to preprocess a source file
-systerm.c.i:
-	cd /home/flower/YueQian/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/MyApp.dir/build.make src/CMakeFiles/MyApp.dir/systerm.c.i
-.PHONY : systerm.c.i
+main.c.i:
+	cd /home/flower/YueQian/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/MyApp.dir/build.make src/CMakeFiles/MyApp.dir/main.c.i
+.PHONY : main.c.i
 
-systerm.s: systerm.c.s
-.PHONY : systerm.s
+main.s: main.c.s
+.PHONY : main.s
 
 # target to generate assembly for a file
-systerm.c.s:
-	cd /home/flower/YueQian/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/MyApp.dir/build.make src/CMakeFiles/MyApp.dir/systerm.c.s
-.PHONY : systerm.c.s
+main.c.s:
+	cd /home/flower/YueQian/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/MyApp.dir/build.make src/CMakeFiles/MyApp.dir/main.c.s
+.PHONY : main.c.s
+
+thread.o: thread.c.o
+.PHONY : thread.o
+
+# target to build an object file
+thread.c.o:
+	cd /home/flower/YueQian/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/MyApp.dir/build.make src/CMakeFiles/MyApp.dir/thread.c.o
+.PHONY : thread.c.o
+
+thread.i: thread.c.i
+.PHONY : thread.i
+
+# target to preprocess a source file
+thread.c.i:
+	cd /home/flower/YueQian/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/MyApp.dir/build.make src/CMakeFiles/MyApp.dir/thread.c.i
+.PHONY : thread.c.i
+
+thread.s: thread.c.s
+.PHONY : thread.s
+
+# target to generate assembly for a file
+thread.c.s:
+	cd /home/flower/YueQian/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/MyApp.dir/build.make src/CMakeFiles/MyApp.dir/thread.c.s
+.PHONY : thread.c.s
 
 # Help Target
 help:
@@ -187,12 +211,15 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... MyApp"
-	@echo "... bitmap_math.o"
-	@echo "... bitmap_math.i"
-	@echo "... bitmap_math.s"
-	@echo "... systerm.o"
-	@echo "... systerm.i"
-	@echo "... systerm.s"
+	@echo "... 2048.o"
+	@echo "... 2048.i"
+	@echo "... 2048.s"
+	@echo "... main.o"
+	@echo "... main.i"
+	@echo "... main.s"
+	@echo "... thread.o"
+	@echo "... thread.i"
+	@echo "... thread.s"
 .PHONY : help
 
 

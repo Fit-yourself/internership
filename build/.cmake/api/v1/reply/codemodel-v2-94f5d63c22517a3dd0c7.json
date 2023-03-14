@@ -73,14 +73,14 @@
 				{
 					"directoryIndex" : 2,
 					"id" : "MyApp::@145eef247bfb46b6828c",
-					"jsonFile" : "target-MyApp-Release-367d24935ce95a5addf0.json",
+					"jsonFile" : "target-MyApp-Release-72c65f0e04c92e845514.json",
 					"name" : "MyApp",
 					"projectIndex" : 0
 				},
 				{
 					"directoryIndex" : 1,
 					"id" : "MyLibrary::@306ed2d68c6501e8728f",
-					"jsonFile" : "target-MyLibrary-Release-31e9afaeaab2a812da35.json",
+					"jsonFile" : "target-MyLibrary-Release-2c37654b8afb8464784f.json",
 					"name" : "MyLibrary",
 					"projectIndex" : 0
 				}

@@ -8,8 +8,9 @@ set(CMAKE_DEPENDS_LANGUAGES
 
 # The set of dependency files which are needed:
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
-  "/home/flower/YueQian/src/bitmap_math.c" "src/CMakeFiles/MyApp.dir/bitmap_math.c.o" "gcc" "src/CMakeFiles/MyApp.dir/bitmap_math.c.o.d"
-  "/home/flower/YueQian/src/systerm.c" "src/CMakeFiles/MyApp.dir/systerm.c.o" "gcc" "src/CMakeFiles/MyApp.dir/systerm.c.o.d"
+  "/home/flower/YueQian/src/2048.c" "src/CMakeFiles/MyApp.dir/2048.c.o" "gcc" "src/CMakeFiles/MyApp.dir/2048.c.o.d"
+  "/home/flower/YueQian/src/main.c" "src/CMakeFiles/MyApp.dir/main.c.o" "gcc" "src/CMakeFiles/MyApp.dir/main.c.o.d"
+  "/home/flower/YueQian/src/thread.c" "src/CMakeFiles/MyApp.dir/thread.c.o" "gcc" "src/CMakeFiles/MyApp.dir/thread.c.o.d"
   )
 
 # Targets to which this target links.

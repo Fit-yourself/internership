@@ -43,18 +43,13 @@ int main(int argc, char const *argv[])
     int fd_gy39 = GY39_init();
     GY39_DATA data = {0};
     GY39_read(fd_gy39,&data); // 激活
-    sleep(1);
+    printf("wait for GY39 to start\n");
+    sleep(3);
     // GY39_mod(fd_gy39, 0);
     while (1)
     {
-        if (GY39_read(fd_gy39,&data) == -1)
-        {
-
-            // printf("read data error\n");
-            // sleep(3);
-            continue;
-        }
-        printf("light: %f, temp: %f, press: %f, humi: %f, alti: %f\n", data.light, data.temp, data.press, data.humi, data.alti);
+        if (GY39_read(fd_gy39,&data) == -1) continue;
+        printf("light: %.2f, temp: %.2f, press: %.4f, humi: %.2f, alti: %.2d\n", data.light, data.temp, data.press, data.humi, data.alti);
         
         // if(mode == 1) mode =2;
         // else mode = 1;

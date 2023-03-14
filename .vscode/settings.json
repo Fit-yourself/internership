@@ -18,6 +18,10 @@
         "errno.h": "c",
         "led.h": "c",
         "beep.h": "c",
-        "gy39.h": "c"
+        "gy39.h": "c",
+        "thread.h": "c",
+        "signal.h": "c",
+        "cmath": "c",
+        "cstdlib": "c"
     }
 }

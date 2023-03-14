@@ -10,9 +10,9 @@ set(CMAKE_DEPENDS_LANGUAGES
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
   "/home/flower/YueQian/lib/GY39.c" "lib/CMakeFiles/MyLibrary.dir/GY39.c.o" "gcc" "lib/CMakeFiles/MyLibrary.dir/GY39.c.o.d"
   "/home/flower/YueQian/lib/LED.c" "lib/CMakeFiles/MyLibrary.dir/LED.c.o" "gcc" "lib/CMakeFiles/MyLibrary.dir/LED.c.o.d"
+  "/home/flower/YueQian/lib/MQ2.c" "lib/CMakeFiles/MyLibrary.dir/MQ2.c.o" "gcc" "lib/CMakeFiles/MyLibrary.dir/MQ2.c.o.d"
   "/home/flower/YueQian/lib/beep.c" "lib/CMakeFiles/MyLibrary.dir/beep.c.o" "gcc" "lib/CMakeFiles/MyLibrary.dir/beep.c.o.d"
-  "/home/flower/YueQian/lib/lcd_bitmap.c" "lib/CMakeFiles/MyLibrary.dir/lcd_bitmap.c.o" "gcc" "lib/CMakeFiles/MyLibrary.dir/lcd_bitmap.c.o.d"
-  "/home/flower/YueQian/lib/lcd_tools.c" "lib/CMakeFiles/MyLibrary.dir/lcd_tools.c.o" "gcc" "lib/CMakeFiles/MyLibrary.dir/lcd_tools.c.o.d"
+  "/home/flower/YueQian/lib/lcd.c" "lib/CMakeFiles/MyLibrary.dir/lcd.c.o" "gcc" "lib/CMakeFiles/MyLibrary.dir/lcd.c.o.d"
   "/home/flower/YueQian/lib/lcd_touch.c" "lib/CMakeFiles/MyLibrary.dir/lcd_touch.c.o" "gcc" "lib/CMakeFiles/MyLibrary.dir/lcd_touch.c.o.d"
   "/home/flower/YueQian/lib/serial.c" "lib/CMakeFiles/MyLibrary.dir/serial.c.o" "gcc" "lib/CMakeFiles/MyLibrary.dir/serial.c.o.d"
   )

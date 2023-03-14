@@ -97,10 +97,24 @@ lib/CMakeFiles/MyLibrary.dir/LED.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/MyLibrary.dir/LED.c.s"
 	cd /home/flower/YueQian/build/lib && /home/flower/.local/arm-linux-gcc/bin/arm-linux-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/flower/YueQian/lib/LED.c -o CMakeFiles/MyLibrary.dir/LED.c.s
 
+lib/CMakeFiles/MyLibrary.dir/MQ2.c.o: lib/CMakeFiles/MyLibrary.dir/flags.make
+lib/CMakeFiles/MyLibrary.dir/MQ2.c.o: ../lib/MQ2.c
+lib/CMakeFiles/MyLibrary.dir/MQ2.c.o: lib/CMakeFiles/MyLibrary.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/flower/YueQian/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building C object lib/CMakeFiles/MyLibrary.dir/MQ2.c.o"
+	cd /home/flower/YueQian/build/lib && /home/flower/.local/arm-linux-gcc/bin/arm-linux-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT lib/CMakeFiles/MyLibrary.dir/MQ2.c.o -MF CMakeFiles/MyLibrary.dir/MQ2.c.o.d -o CMakeFiles/MyLibrary.dir/MQ2.c.o -c /home/flower/YueQian/lib/MQ2.c
+
+lib/CMakeFiles/MyLibrary.dir/MQ2.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/MyLibrary.dir/MQ2.c.i"
+	cd /home/flower/YueQian/build/lib && /home/flower/.local/arm-linux-gcc/bin/arm-linux-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/flower/YueQian/lib/MQ2.c > CMakeFiles/MyLibrary.dir/MQ2.c.i
+
+lib/CMakeFiles/MyLibrary.dir/MQ2.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/MyLibrary.dir/MQ2.c.s"
+	cd /home/flower/YueQian/build/lib && /home/flower/.local/arm-linux-gcc/bin/arm-linux-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/flower/YueQian/lib/MQ2.c -o CMakeFiles/MyLibrary.dir/MQ2.c.s
+
 lib/CMakeFiles/MyLibrary.dir/beep.c.o: lib/CMakeFiles/MyLibrary.dir/flags.make
 lib/CMakeFiles/MyLibrary.dir/beep.c.o: ../lib/beep.c
 lib/CMakeFiles/MyLibrary.dir/beep.c.o: lib/CMakeFiles/MyLibrary.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/flower/YueQian/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building C object lib/CMakeFiles/MyLibrary.dir/beep.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/flower/YueQian/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building C object lib/CMakeFiles/MyLibrary.dir/beep.c.o"
 	cd /home/flower/YueQian/build/lib && /home/flower/.local/arm-linux-gcc/bin/arm-linux-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT lib/CMakeFiles/MyLibrary.dir/beep.c.o -MF CMakeFiles/MyLibrary.dir/beep.c.o.d -o CMakeFiles/MyLibrary.dir/beep.c.o -c /home/flower/YueQian/lib/beep.c
 
 lib/CMakeFiles/MyLibrary.dir/beep.c.i: cmake_force
@@ -111,33 +125,19 @@ lib/CMakeFiles/MyLibrary.dir/beep.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/MyLibrary.dir/beep.c.s"
 	cd /home/flower/YueQian/build/lib && /home/flower/.local/arm-linux-gcc/bin/arm-linux-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/flower/YueQian/lib/beep.c -o CMakeFiles/MyLibrary.dir/beep.c.s
 
-lib/CMakeFiles/MyLibrary.dir/lcd_bitmap.c.o: lib/CMakeFiles/MyLibrary.dir/flags.make
-lib/CMakeFiles/MyLibrary.dir/lcd_bitmap.c.o: ../lib/lcd_bitmap.c
-lib/CMakeFiles/MyLibrary.dir/lcd_bitmap.c.o: lib/CMakeFiles/MyLibrary.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/flower/YueQian/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building C object lib/CMakeFiles/MyLibrary.dir/lcd_bitmap.c.o"
-	cd /home/flower/YueQian/build/lib && /home/flower/.local/arm-linux-gcc/bin/arm-linux-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT lib/CMakeFiles/MyLibrary.dir/lcd_bitmap.c.o -MF CMakeFiles/MyLibrary.dir/lcd_bitmap.c.o.d -o CMakeFiles/MyLibrary.dir/lcd_bitmap.c.o -c /home/flower/YueQian/lib/lcd_bitmap.c
+lib/CMakeFiles/MyLibrary.dir/lcd.c.o: lib/CMakeFiles/MyLibrary.dir/flags.make
+lib/CMakeFiles/MyLibrary.dir/lcd.c.o: ../lib/lcd.c
+lib/CMakeFiles/MyLibrary.dir/lcd.c.o: lib/CMakeFiles/MyLibrary.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/flower/YueQian/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building C object lib/CMakeFiles/MyLibrary.dir/lcd.c.o"
+	cd /home/flower/YueQian/build/lib && /home/flower/.local/arm-linux-gcc/bin/arm-linux-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT lib/CMakeFiles/MyLibrary.dir/lcd.c.o -MF CMakeFiles/MyLibrary.dir/lcd.c.o.d -o CMakeFiles/MyLibrary.dir/lcd.c.o -c /home/flower/YueQian/lib/lcd.c
 
-lib/CMakeFiles/MyLibrary.dir/lcd_bitmap.c.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/MyLibrary.dir/lcd_bitmap.c.i"
-	cd /home/flower/YueQian/build/lib && /home/flower/.local/arm-linux-gcc/bin/arm-linux-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/flower/YueQian/lib/lcd_bitmap.c > CMakeFiles/MyLibrary.dir/lcd_bitmap.c.i
+lib/CMakeFiles/MyLibrary.dir/lcd.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/MyLibrary.dir/lcd.c.i"
+	cd /home/flower/YueQian/build/lib && /home/flower/.local/arm-linux-gcc/bin/arm-linux-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/flower/YueQian/lib/lcd.c > CMakeFiles/MyLibrary.dir/lcd.c.i
 
-lib/CMakeFiles/MyLibrary.dir/lcd_bitmap.c.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/MyLibrary.dir/lcd_bitmap.c.s"
-	cd /home/flower/YueQian/build/lib && /home/flower/.local/arm-linux-gcc/bin/arm-linux-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/flower/YueQian/lib/lcd_bitmap.c -o CMakeFiles/MyLibrary.dir/lcd_bitmap.c.s
-
-lib/CMakeFiles/MyLibrary.dir/lcd_tools.c.o: lib/CMakeFiles/MyLibrary.dir/flags.make
-lib/CMakeFiles/MyLibrary.dir/lcd_tools.c.o: ../lib/lcd_tools.c
-lib/CMakeFiles/MyLibrary.dir/lcd_tools.c.o: lib/CMakeFiles/MyLibrary.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/flower/YueQian/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building C object lib/CMakeFiles/MyLibrary.dir/lcd_tools.c.o"
-	cd /home/flower/YueQian/build/lib && /home/flower/.local/arm-linux-gcc/bin/arm-linux-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT lib/CMakeFiles/MyLibrary.dir/lcd_tools.c.o -MF CMakeFiles/MyLibrary.dir/lcd_tools.c.o.d -o CMakeFiles/MyLibrary.dir/lcd_tools.c.o -c /home/flower/YueQian/lib/lcd_tools.c
-
-lib/CMakeFiles/MyLibrary.dir/lcd_tools.c.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/MyLibrary.dir/lcd_tools.c.i"
-	cd /home/flower/YueQian/build/lib && /home/flower/.local/arm-linux-gcc/bin/arm-linux-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/flower/YueQian/lib/lcd_tools.c > CMakeFiles/MyLibrary.dir/lcd_tools.c.i
-
-lib/CMakeFiles/MyLibrary.dir/lcd_tools.c.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/MyLibrary.dir/lcd_tools.c.s"
-	cd /home/flower/YueQian/build/lib && /home/flower/.local/arm-linux-gcc/bin/arm-linux-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/flower/YueQian/lib/lcd_tools.c -o CMakeFiles/MyLibrary.dir/lcd_tools.c.s
+lib/CMakeFiles/MyLibrary.dir/lcd.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/MyLibrary.dir/lcd.c.s"
+	cd /home/flower/YueQian/build/lib && /home/flower/.local/arm-linux-gcc/bin/arm-linux-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/flower/YueQian/lib/lcd.c -o CMakeFiles/MyLibrary.dir/lcd.c.s
 
 lib/CMakeFiles/MyLibrary.dir/lcd_touch.c.o: lib/CMakeFiles/MyLibrary.dir/flags.make
 lib/CMakeFiles/MyLibrary.dir/lcd_touch.c.o: ../lib/lcd_touch.c
@@ -171,9 +171,9 @@ lib/CMakeFiles/MyLibrary.dir/serial.c.s: cmake_force
 MyLibrary_OBJECTS = \
 "CMakeFiles/MyLibrary.dir/GY39.c.o" \
 "CMakeFiles/MyLibrary.dir/LED.c.o" \
+"CMakeFiles/MyLibrary.dir/MQ2.c.o" \
 "CMakeFiles/MyLibrary.dir/beep.c.o" \
-"CMakeFiles/MyLibrary.dir/lcd_bitmap.c.o" \
-"CMakeFiles/MyLibrary.dir/lcd_tools.c.o" \
+"CMakeFiles/MyLibrary.dir/lcd.c.o" \
 "CMakeFiles/MyLibrary.dir/lcd_touch.c.o" \
 "CMakeFiles/MyLibrary.dir/serial.c.o"
 
@@ -182,9 +182,9 @@ MyLibrary_EXTERNAL_OBJECTS =
 
 lib/libMyLibrary.a: lib/CMakeFiles/MyLibrary.dir/GY39.c.o
 lib/libMyLibrary.a: lib/CMakeFiles/MyLibrary.dir/LED.c.o
+lib/libMyLibrary.a: lib/CMakeFiles/MyLibrary.dir/MQ2.c.o
 lib/libMyLibrary.a: lib/CMakeFiles/MyLibrary.dir/beep.c.o
-lib/libMyLibrary.a: lib/CMakeFiles/MyLibrary.dir/lcd_bitmap.c.o
-lib/libMyLibrary.a: lib/CMakeFiles/MyLibrary.dir/lcd_tools.c.o
+lib/libMyLibrary.a: lib/CMakeFiles/MyLibrary.dir/lcd.c.o
 lib/libMyLibrary.a: lib/CMakeFiles/MyLibrary.dir/lcd_touch.c.o
 lib/libMyLibrary.a: lib/CMakeFiles/MyLibrary.dir/serial.c.o
 lib/libMyLibrary.a: lib/CMakeFiles/MyLibrary.dir/build.make

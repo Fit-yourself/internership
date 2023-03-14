@@ -7,6 +7,7 @@ project(YueQian C)
 
 # 添加头文件路径
 include_directories(${CMAKE_CURRENT_SOURCE_DIR}/inc)
+include_directories(${CMAKE_CURRENT_SOURCE_DIR}/src)
 
 #添加编译子目录
 add_subdirectory(lib)
