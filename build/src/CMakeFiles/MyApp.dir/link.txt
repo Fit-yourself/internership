@@ -1,1 +1,0 @@
-/home/flower/.local/arm-linux-gcc/bin/arm-linux-gcc -O3 -DNDEBUG CMakeFiles/MyApp.dir/2048.c.o CMakeFiles/MyApp.dir/main.c.o CMakeFiles/MyApp.dir/thread.c.o -o ../../bin/MyApp  ../lib/libMyLibrary.a -lm -lrt -lpthread 
